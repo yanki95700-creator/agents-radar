@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信息雷达 · AI 热点</title>
+<style>
+  :root {
+    --bg: #0b0e14; --bg-card: #12161f; --bg-hover: #171c27; --bg-chip: #1a2030;
+    --border: #232a3a; --text: #dbe2ef; --muted: #7d8aa5; --dim: #55607a;
+    --accent: #e8a33d; --accent2: #5b9dff; --hot: #ff6b4a;
+    --good: #e8a33d; --mid: #8fa8d8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font: 15px/1.65 -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(11,14,20,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  .hd-in { max-width: 860px; margin: 0 auto; padding: 14px 20px 10px; }
+  .hd-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .logo { font-size: 19px; font-weight: 700; letter-spacing: .02em; }
+  .logo em { color: var(--accent); font-style: normal; }
+  .hd-meta { color: var(--dim); font-size: 12px; }
+  .hd-meta a { color: var(--accent2); }
+  .chips { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex-shrink: 0; padding: 4px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-chip); color: var(--muted); font-size: 13px; cursor: pointer; transition: .15s; user-select: none; }
+  .chip:hover { color: var(--text); border-color: var(--dim); }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #14100a; font-weight: 600; }
+
+  main { max-width: 860px; margin: 0 auto; padding: 18px 20px 80px; }
+
+  /* TOP 3 */
+  .top3 { background: linear-gradient(135deg, #171320, #12161f 60%); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin-bottom: 22px; }
+  .top3 h2 { font-size: 13px; letter-spacing: .18em; color: var(--hot); margin-bottom: 10px; }
+  .t3row { display: flex; align-items: baseline; gap: 10px; padding: 7px 0; border-top: 1px dashed #20263533; }
+  .t3row:first-of-type { border-top: none; }
+  .t3rank { font-size: 17px; font-weight: 800; color: var(--hot); width: 18px; flex-shrink: 0; }
+  .t3title { font-weight: 600; }
+  .t3title:hover { color: var(--accent); }
+  .t3meta { color: var(--dim); font-size: 12px; flex-shrink: 0; margin-left: auto; white-space: nowrap; }
+
+  /* 日期分组 */
+  .day { margin: 26px 0 10px; display: flex; align-items: center; gap: 12px; }
+  .day span { font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: .1em; }
+  .day::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+  /* 卡片 */
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 15px 17px; margin-bottom: 12px; transition: .15s; }
+  .card:hover { background: var(--bg-hover); border-color: #2e3750; }
+  .c-head { display: flex; gap: 10px; align-items: flex-start; }
+  .score { flex-shrink: 0; min-width: 52px; text-align: center; border-radius: 8px; padding: 3px 6px 2px; font-size: 11px; line-height: 1.3; border: 1px solid; }
+  .score b { display: block; font-size: 17px; }
+  .s-hot  { color: var(--hot);  border-color: #ff6b4a44; background: #ff6b4a12; }
+  .s-good { color: var(--good); border-color: #e8a33d44; background: #e8a33d10; }
+  .s-mid  { color: var(--mid);  border-color: #8fa8d833; background: #8fa8d80d; }
+  .c-title { font-size: 15.5px; font-weight: 600; line-height: 1.45; }
+  .c-title:hover { color: var(--accent); }
+  .c-meta { margin-top: 3px; font-size: 12px; color: var(--dim); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .cat { padding: 0 8px; border-radius: 5px; background: var(--bg-chip); border: 1px solid var(--border); color: var(--accent2); font-size: 11px; }
+  .reason { margin-top: 9px; padding: 8px 12px; background: #e8a33d0a; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; color: #cfc4a8; font-size: 13.5px; }
+  .reason .ai { color: var(--accent); font-size: 11px; margin-right: 5px; }
+  .c-foot { margin-top: 9px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .srcbtn { font-size: 12px; color: var(--accent2); background: #5b9dff12; border: 1px solid #5b9dff33; padding: 2px 10px; border-radius: 999px; cursor: pointer; user-select: none; }
+  .srcbtn:hover { background: #5b9dff22; }
+  .tag { font-size: 12px; color: var(--muted); }
+  .tag:hover { color: var(--accent); cursor: pointer; }
+  .srclist { display: none; margin-top: 8px; padding: 8px 12px; background: #0d1119; border: 1px solid var(--border); border-radius: 8px; font-size: 12.5px; }
+  .srclist.open { display: block; }
+  .srclist a { display: block; padding: 3px 0; color: var(--muted); }
+  .srclist a:hover { color: var(--accent2); }
+  .srclist a::before { content: "↗ "; color: var(--dim); }
+
+  .empty { text-align: center; color: var(--dim); padding: 60px 0; }
+  footer { text-align: center; color: var(--dim); font-size: 12px; padding: 20px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <div class="hd-top">
+      <div class="logo">📡 信息雷达 <em>· AI 热点</em></div>
+      <div class="hd-meta" id="meta">加载中…</div>
+      <div class="hd-meta" style="margin-left:auto"><a href="./index.html">完整日报 →</a></div>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+</header>
+<main id="main"><div class="empty">加载中…</div></main>
+<footer>信息雷达 · 保真本地 Demo — 板块设计参考 AI HOT · 数据来自 16 个公开源 · 推荐理由由 DeepSeek 生成</footer>
+
+<script>
+const CATS = ["精选", "全部", "模型", "产品", "行业", "论文", "技巧", "动态"];
+let DATA = null, cat = "精选";
+
+const $ = (s) => document.querySelector(s);
+
+function relTime(iso) {
+  const t = new Date(iso).getTime();
+  const m = Math.max(0, (Date.now() - t) / 60000);
+  if (m < 60) return Math.round(m) + " 分钟前";
+  if (m < 1440) return Math.round(m / 60) + " 小时前";
+  const d = new Date(t + 8 * 3600e3); // CST
+  return (d.getUTCMonth() + 1) + "月" + d.getUTCDate() + "日 " + String(d.getUTCHours()).padStart(2, "0") + ":" + String(d.getUTCMinutes()).padStart(2, "0");
+}
+function cstDay(iso) {
+  return new Date(new Date(iso).getTime() + 8 * 3600e3).toISOString().slice(0, 10);
+}
+function scoreCls(s) { return s >= 72 ? "s-hot" : s >= 58 ? "s-good" : "s-mid"; }
+function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+
+function chipBar() {
+  $("#chips").innerHTML = CATS.map((c) => `<div class="chip${c === cat ? " on" : ""}" data-c="${c}">${c}</div>`).join("");
+  document.querySelectorAll(".chip").forEach((el) =>
+    el.addEventListener("click", () => { cat = el.dataset.c; chipBar(); render(); }),
+  );
+}
+
+function card(e) {
+  const srcs = e.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("");
+  const tags = e.tags.map((t) => `<span class="tag">#${esc(t)}</span>`).join("");
+  return `<div class="card">
+    <div class="c-head">
+      <div class="score ${scoreCls(e.score)}"><b>${e.score}</b>精选</div>
+      <div style="flex:1;min-width:0">
+        <a class="c-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a>
+        <div class="c-meta">
+          <span>${relTime(e.publishedAt)}</span>
+          <span class="cat">${e.category}</span>
+          ${e.pop > 0 ? `<span>热度 ${e.pop}</span>` : ""}
+          ${e.comments > 0 ? `<span>💬 ${e.comments}</span>` : ""}
+        </div>
+      </div>
+    </div>
+    <div class="reason">${e.reasonBy === "llm" ? '<span class="ai">🤖 编辑</span>' : ""}${esc(e.reason)}</div>
+    <div class="c-foot">
+      <span class="srcbtn" data-t="src">${e.sources.length} 个信源 ▾</span>
+      ${tags}
+    </div>
+    <div class="srclist">${srcs}</div>
+  </div>`;
+}
+
+function render() {
+  if (!DATA) return;
+  let evts = DATA.events;
+  if (cat === "精选") evts = evts.filter((e) => e.score >= 55).slice(0, 30);
+  else if (cat !== "全部") evts = evts.filter((e) => e.category === cat);
+
+  // TOP3（仅精选/全部页显示）
+  let html = "";
+  if (cat === "精选" || cat === "全部") {
+    const t3 = DATA.top3.map((id) => DATA.events.find((e) => e.id === id)).filter(Boolean);
+    html += `<div class="top3"><h2>🔥 今日热点 TOP 3</h2>` + t3.map((e, i) =>
+      `<div class="t3row"><span class="t3rank">${i + 1}</span><a class="t3title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a><span class="t3meta">${e.sources.length} 信源 · ${relTime(e.publishedAt)}</span></div>`,
+    ).join("") + `</div>`;
+  }
+
+  // 按 CST 日期分组
+  const byDay = new Map();
+  for (const e of evts) {
+    const d = cstDay(e.publishedAt);
+    if (!byDay.has(d)) byDay.set(d, []);
+    byDay.get(d).push(e);
+  }
+  const days = [...byDay.keys()].sort().reverse();
+  for (const d of days) {
+    const [, m, dd] = d.split("-");
+    html += `<div class="day"><span>${Number(m)}月${Number(dd)}日 · ${byDay.get(d).length} 条</span></div>`;
+    html += byDay.get(d).sort((a, b) => b.score - a.score).map(card).join("");
+  }
+  if (!evts.length) html += `<div class="empty">该板块暂无内容</div>`;
+  $("#main").innerHTML = html;
+
+  document.querySelectorAll(".srcbtn").forEach((btn) =>
+    btn.addEventListener("click", () => btn.closest(".card").querySelector(".srclist").classList.toggle("open")),
+  );
+}
+
+fetch("./hot-data/latest.json")
+  .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  .then((d) => {
+    DATA = d;
+    const nSrc = Object.keys(d.stats.sources).length;
+    $("#meta").textContent = `${d.dateStr} · ${d.stats.events} 个事件 / ${nSrc} 个源 · ${d.stats.multiSource} 个多信源`;
+    chipBar();
+    render();
+  })
+  .catch((e) => { $("#main").innerHTML = `<div class="empty">⚠️ 加载失败：${e.message}<br>请先运行 radar-hot.ts 生成数据</div>`; });
+</script>
+</body>
+</html>

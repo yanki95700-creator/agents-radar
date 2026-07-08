@@ -3,3 +3,8 @@
 node_modules/
 dist/
 social/
+
+# 本地运行产物（不入库）
+logs/
+.claude/
+nohup.out

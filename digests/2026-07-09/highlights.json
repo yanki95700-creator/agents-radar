@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 信任危机：Token消耗异常引众怒",
+      "Claude Code Buddy功能被静默移除",
+      "OpenAI Codex Windows兼容性突破",
+      "Gemini CLI Agent虚假成功循环",
+      "Copilot CLI v1.0.69修复无限循环",
+      "DeepSeek TUI冲刺v0.8.68，新增Android"
+    ],
+    "ai-agents": [
+      "OpenClaw修复process.env误报，安全更精准",
+      "OpenClaw解决死锁，提升写锁重入稳定性",
+      "OpenClaw重构频道状态，防数据泄露",
+      "社区热议OpenClaw工具输出安全风险",
+      "OpenClaw优化LLM错误重试，避免死循环",
+      "111个PR合并，OpenClaw密集加固功能"
+    ],
+    "ai-trending": [
+      "Agent-skills引热捧，AI技能市场崛起",
+      "Dify和Open-WebUI持续霸榜低代码Agent",
+      "Ollama vLLM领跑本地大模型部署工具",
+      "RAGFlow与AnythingLLM争夺RAG标杆",
+      "向量数据库ZVector与Milvus齐头并进",
+      "TradingAgents引爆AI量化交易新方向"
+    ],
+    "ai-web": [
+      "Anthropic推出Interviewer，大规模访谈专业人群",
+      "Project Vend二期：Sonnet 4.0店长能力飞跃",
+      "Anthropic从观察行为转向理解动机与影响",
+      "OpenAI今日仅更新元数据，无实质内容",
+      "AI社会学研究进入系统化数据收集阶段",
+      "Claudius店长克服亏损，零售运营能力大增"
+    ],
+    "ai-hn": [
+      "GPT-Live实时语音交互引爆HN社区讨论",
+      "GPT-5.6 Sol Terra Luna本周四公测",
+      "Grok 4.5发布，xAI紧跟OpenAI步伐",
+      "Geosql技能让Claude玩转地理空间数据",
+      "微软Flint可视化语言面向AI Agent",
+      "Anthropic与Abnormal.ai纠纷引发热议"
+    ],
+    "ai-arxiv": [
+      "DepthWeave-KV压缩长上下文缓存，节省内存",
+      "DT-Guard轻量级安全护栏提升检测鲁棒性",
+      "Danus多智能体用图记忆解决数学难题",
+      "Doomed早停机制预测Agent失败轨迹",
+      "DynaKRAG框架增强多跳RAG证据控制",
+      "RetAssist基于检索增强推理，提升数学精度"
+    ],
+    "ai-community": [
+      "Agent伪造测试日志并深信不疑引发安全讨论",
+      "AI时代工程师生存指南引发开发者共鸣",
+      "实验证明AI降低初级开发者主动思考能力",
+      "反AI控制策略：保持人为备份机制",
+      "循环工程Karpathy方法5倍效率提升",
+      "Prompt工程到Loop工程范式转移来临"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code and OpenAI Codex lead community",
+      "Agent autonomy beats raw capability",
+      "Reliability issues dominate over new features",
+      "Qwen Code and DeepSeek TUI expand platforms",
+      "Session compaction bugs are a top concern",
+      "Metering and billing cause trust crises"
+    ],
+    "ai-agents": [
+      "OpenClaw has 500 PRs and 312 issues",
+      "111 PRs merged or closed today",
+      "Stability crunch with 303 open issues",
+      "Last stable release is 2026.3.13",
+      "Failover bugs fixed for Anthropic providers",
+      "Backlog of high-severity issues grows"
+    ],
+    "ai-trending": [
+      "Agent skill ecosystems explode on GitHub",
+      "Local-first agent memory is infrastructure critical",
+      "System prompt leaks go mainstream",
+      "addyosmani/agent-skills gained 1,322 stars",
+      "Tencent's CubeSandbox adds 555 stars",
+      "Ollama now supports Kimi-K2.6 and GLM-5.1"
+    ],
+    "ai-web": [
+      "Anthropic releases Interviewer research tool",
+      "OpenAI announces GPT Live product",
+      "Anthropic studies user sentiment empirically",
+      "Project Vend tests real-world AI shopkeeping",
+      "Anthropic focuses on societal impact research",
+      "New content from both Anthropic and OpenAI"
+    ],
+    "ai-hn": [
+      "GPT-Live launch dominates Hacker News",
+      "GPT-5.6 Sol, Terra, Luna coming Thursday",
+      "Grok 4.5 counter-programmed against OpenAI",
+      "China issues security alert on Claude Code",
+      "Anthropic sued over Abnormal AI",
+      "Geosql skill for geospatial data gains traction"
+    ],
+    "ai-arxiv": [
+      "KV cache compression remains a key focus",
+      "DepthWeave-KV targets long-context bottlenecks",
+      "FreqDepthKV uses frequency-guided sharing",
+      "Knowledge graphs unify with RAG research",
+      "Non-English LLM evaluation gains momentum",
+      "Formal verification meets LLM agents"
+    ],
+    "ai-community": [
+      "Agents faking test logs alarms developers",
+      "Loop engineering replaces prompt engineering",
+      "OpenAI Assistants API shutdown causes migration",
+      "Agent benchmarks found unreliable",
+      "Google AI environmental impact debated",
+      "Cost control planes manage LLM complexity"
+    ]
+  }
+}
