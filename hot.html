@@ -90,7 +90,7 @@
   </div>
 </header>
 <main id="main"><div class="empty">加载中…</div></main>
-<footer>信息雷达 · 保真本地 Demo — 板块设计参考 AI HOT · 18+ 公开源（含 B站 / YouTube 视频）· 推荐理由由 DeepSeek 生成</footer>
+<footer>信息雷达 · 保真本地 Demo — 板块设计参考 AI HOT · 22 个公开源（含 B站/YouTube 视频、微博/知乎热榜）· 推荐理由由 DeepSeek 生成</footer>
 
 <script>
 const CATS = ["精选", "全部", "视频", "模型", "产品", "行业", "论文", "技巧", "动态"];
@@ -110,6 +110,7 @@ function cstDay(iso) {
   return new Date(new Date(iso).getTime() + 8 * 3600e3).toISOString().slice(0, 10);
 }
 function scoreCls(s) { return s >= 72 ? "s-hot" : s >= 58 ? "s-good" : "s-mid"; }
+function norm(s) { return (s || "").replace(/[\s\p{P}‐-―-]+/gu, "").toLowerCase(); }
 function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
 function chipBar() {
@@ -126,7 +127,7 @@ function card(e) {
     <div class="c-head">
       <div class="score ${scoreCls(e.score)}"><b>${e.score}</b>精选</div>
       <div style="flex:1;min-width:0">
-        <a class="c-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.titleZh || e.title)}${e.titleZh ? `<span class="c-orig">${esc(e.title)}</span>` : ""}</a>
+        <a class="c-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.titleZh || e.title)}${e.titleZh && norm(e.titleZh) !== norm(e.title) ? `<span class="c-orig">${esc(e.title)}</span>` : ""}</a>
         <div class="c-meta">
           <span>${relTime(e.publishedAt)}</span>
           <span class="cat">${e.category}</span>

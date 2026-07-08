@@ -199,7 +199,14 @@ function entityTags(title: string, brief: string): string[] {
 // 打分（0-100 精选分；跨源数是最强信号，与参考站一致）
 // ---------------------------------------------------------------------------
 
-const KIND_AUTH: Record<string, number> = { official: 8, media: 5, video: 5, cn: 4, community: 3 };
+const KIND_AUTH: Record<string, number> = {
+  official: 8,
+  media: 5,
+  video: 5,
+  cn: 4,
+  social: 4,
+  community: 3,
+};
 
 function hoursSince(iso: string): number {
   const t = new Date(iso).getTime();
@@ -269,6 +276,10 @@ function applyMerges(events: HotEvent[], groups: number[][]): HotEvent[] {
       base.tags = [...new Set([...base.tags, ...m.tags])].slice(0, 4);
       base.isVideo = base.isVideo || m.isVideo;
       absorbed.add(m.id);
+    }
+    // 合并后刷新本地推荐理由的信源数（LLM 理由随后会覆盖前 12 名）
+    if (base.reasonBy === "local" && base.sources.length > 1) {
+      base.reason = `${base.sources.length} 个信源同时报道${base.pop > 0 ? `；最高热度 ${base.pop}` : ""}`;
     }
     // 每多一个信源 +14 分（与主打分同权重），封顶 100
     base.score = Math.min(100, base.score + 14 * (base.sources.length - prevSrc));

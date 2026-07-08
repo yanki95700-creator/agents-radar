@@ -18,7 +18,7 @@ import { fetchAllCn } from "./cn-sources.ts";
 // 统一记录
 // ---------------------------------------------------------------------------
 
-export type SourceKind = "official" | "media" | "community" | "cn" | "video";
+export type SourceKind = "official" | "media" | "community" | "cn" | "video" | "social";
 
 export interface HotItem {
   source: string; // 展示名，如 "OpenAI 官方" / "The Verge"
@@ -257,6 +257,107 @@ async function fetchBilibili(): Promise<HotItem[]> {
 }
 
 // ---------------------------------------------------------------------------
+// 社交热榜：微博热搜 + 知乎热榜（均为全站热榜，AI 过滤在降噪步骤）
+// ---------------------------------------------------------------------------
+
+interface WeiboHotItem {
+  word: string;
+  note?: string;
+  num?: number;
+  label_name?: string;
+}
+
+async function fetchWeiboHot(): Promise<HotItem[]> {
+  try {
+    const resp = await fetch("https://weibo.com/ajax/side/hotSearch", {
+      headers: { "User-Agent": UA, Referer: "https://weibo.com" },
+    });
+    if (!resp.ok) {
+      console.error(`  [微博热搜] HTTP ${resp.status}`);
+      return [];
+    }
+    const data = (await resp.json()) as { ok: number; data?: { realtime?: WeiboHotItem[] } };
+    if (data.ok !== 1) {
+      console.error(`  [微博热搜] ok=${data.ok}`);
+      return [];
+    }
+    const items: HotItem[] = [];
+    for (const w of data.data?.realtime ?? []) {
+      if (!w.word) continue;
+      items.push({
+        source: "微博热搜",
+        kind: "social",
+        title: w.word,
+        url: `https://s.weibo.com/weibo?q=${encodeURIComponent(`#${w.word}#`)}`,
+        score: w.num ?? 0,
+        comments: 0,
+        // 热搜 API 不给上榜时间，以抓取时刻计（“此刻在榜”即时效信号）
+        publishedAt: new Date().toISOString(),
+        tags: w.label_name ? [w.label_name] : [],
+        brief: w.note ?? "",
+        lang: "zh",
+        pureAi: false,
+      });
+    }
+    console.log(`  [微博热搜] ${items.length} 条（AI 过滤在降噪步骤）`);
+    return items;
+  } catch (err) {
+    console.error(`  [微博热搜] 抓取失败: ${err}`);
+    return [];
+  }
+}
+
+interface ZhihuHotItem {
+  detail_text?: string;
+  target?: {
+    id: number | string;
+    title?: string;
+    excerpt?: string;
+    created?: number;
+    comment_count?: number;
+  };
+}
+
+async function fetchZhihuHot(): Promise<HotItem[]> {
+  try {
+    const resp = await fetch("https://api.zhihu.com/topstory/hot-list?limit=50", {
+      headers: { "User-Agent": UA },
+    });
+    if (!resp.ok) {
+      console.error(`  [知乎热榜] HTTP ${resp.status}`);
+      return [];
+    }
+    const data = (await resp.json()) as { data?: ZhihuHotItem[] };
+    const items: HotItem[] = [];
+    for (const z of data.data ?? []) {
+      const t = z.target;
+      if (!t?.title || !t.id) continue;
+      // detail_text 形如 "687 万热度" → 6870000
+      const m = (z.detail_text ?? "").match(/([\d.]+)\s*万/);
+      const heat = m ? Math.round(Number(m[1]) * 10000) : 0;
+      items.push({
+        source: "知乎热榜",
+        kind: "social",
+        title: t.title,
+        url: `https://www.zhihu.com/question/${t.id}`,
+        score: heat,
+        comments: t.comment_count ?? 0,
+        publishedAt: t.created ? new Date(t.created * 1000).toISOString() : new Date().toISOString(),
+        tags: [],
+        brief: (t.excerpt ?? "").slice(0, 160),
+        lang: "zh",
+        pureAi: false,
+      });
+    }
+    console.log(`  [知乎热榜] ${items.length} 条（AI 过滤在降噪步骤）`);
+    return items;
+  } catch (err) {
+    console.error(`  [知乎热榜] 抓取失败: ${err}`);
+    return [];
+  }
+}
+
+// ---------------------------------------------------------------------------
 // 各源定义
 // ---------------------------------------------------------------------------
 
@@ -307,7 +408,7 @@ const FEEDS: Array<{ name: string; url: string; opts: RssOpts }> = [
 // ---------------------------------------------------------------------------
 
 export async function fetchAllHot(): Promise<{ items: HotItem[]; okSources: string[] }> {
-  const [feedResults, hn, arxiv, devto, cn, yt, bili] = await Promise.all([
+  const [feedResults, hn, arxiv, devto, cn, yt, bili, weibo, zhihu] = await Promise.all([
     Promise.all(FEEDS.map((f) => fetchFeed(f.name, f.url, f.opts))),
     fetchHnData().catch(() => ({ stories: [], fetchSuccess: false })),
     fetchArxivData().catch(() => ({ papers: [], fetchSuccess: false })),
@@ -315,9 +416,11 @@ export async function fetchAllHot(): Promise<{ items: HotItem[]; okSources: stri
     fetchAllCn().catch(() => ({ links: [], okSources: [] as string[] })),
     fetchYouTube().catch(() => [] as HotItem[]),
     fetchBilibili().catch(() => [] as HotItem[]),
+    fetchWeiboHot().catch(() => [] as HotItem[]),
+    fetchZhihuHot().catch(() => [] as HotItem[]),
   ]);
 
-  const items: HotItem[] = [...feedResults.flat(), ...yt, ...bili];
+  const items: HotItem[] = [...feedResults.flat(), ...yt, ...bili, ...weibo, ...zhihu];
 
   for (const s of hn.stories)
     items.push({
