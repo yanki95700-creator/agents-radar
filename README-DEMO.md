@@ -85,8 +85,9 @@ bash scripts/run-full.sh          # 报告写到 digests/YYYY-MM-DD/
 
 新旗舰页面 `hot.html`：**16 源聚合 → 事件聚类（同一事件多源合并 = "X个信源"）→ 板块分类 → 0-100 精选分 → 今日热点 TOP 3 → DeepSeek 编辑体推荐理由**。
 
-- 信息源：OpenAI/Google/HuggingFace 官方博客 + The Verge/TechCrunch/The Decoder/Ars Technica/IT之家/爱范儿 + HN/arXiv/Dev.to + 掘金/量子位/36氪/少数派/InfoQ
-- 板块：精选 / 全部 / 模型 / 产品 / 行业 / 论文 / 技巧 / 动态
+- 信息源（20 个）：OpenAI/Google/HuggingFace 官方博客 + The Verge/TechCrunch/The Decoder/Ars Technica/IT之家/爱范儿 + HN/arXiv/Dev.to + 掘金/量子位/36氪/少数派/InfoQ + **视频：B站（热门/科技榜/知识榜）、YouTube（OpenAI/DeepMind/两分钟论文）**
+- 板块：精选 / 全部 / **视频** / 模型 / 产品 / 行业 / 论文 / 技巧 / 动态（白底浅色 UI）
+- **代理提示**：YouTube/HuggingFace 需走代理。脚本已自动适配（探测 Clash 7890 端口）；手动跑请带前缀：`NODE_USE_ENV_PROXY=1 ./node_modules/.bin/tsx radar-hot.ts --llm`（Node 的 fetch 默认不读代理环境变量）
 - `--llm` 时额外做（DeepSeek，每天几分钱）：
   - **语义级事件合并**：换了说法/跨中英的同一事件也聚成一卡（带护栏：单组≤6、总吸收≤25%，防 LLM 退化输出；汇总帖不参与合并）
   - **英文标题配中文译题**：卡片中文题为主、英文原题为副

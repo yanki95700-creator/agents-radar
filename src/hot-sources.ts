@@ -18,7 +18,7 @@ import { fetchAllCn } from "./cn-sources.ts";
 // 统一记录
 // ---------------------------------------------------------------------------
 
-export type SourceKind = "official" | "media" | "community" | "cn";
+export type SourceKind = "official" | "media" | "community" | "cn" | "video";
 
 export interface HotItem {
   source: string; // 展示名，如 "OpenAI 官方" / "The Verge"
@@ -135,6 +135,128 @@ async function fetchFeed(name: string, url: string, opts: RssOpts): Promise<HotI
 }
 
 // ---------------------------------------------------------------------------
+// 视频源：YouTube 频道 RSS（Atom，带播放量）+ B站热门/科技排行榜 API
+// ---------------------------------------------------------------------------
+
+/** 视频保鲜期放宽到 6 天（视频生命周期比新闻长） */
+const VIDEO_FRESH_HOURS = 144;
+
+const YT_CHANNELS: Array<{ name: string; id: string }> = [
+  { name: "YouTube·OpenAI", id: "UCXZCJLdBC09xxGZ6gcdrc6A" },
+  { name: "YouTube·DeepMind", id: "UCP7jMXSY2xbc3KCAE0MHQ-A" },
+  { name: "YouTube·两分钟论文", id: "UCbfYPyITQ-7l4upoX8nvctg" },
+];
+
+async function fetchYouTube(): Promise<HotItem[]> {
+  const all = await Promise.all(
+    YT_CHANNELS.map(async ({ name, id }) => {
+      try {
+        const resp = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${id}`, {
+          headers: { "User-Agent": UA },
+        });
+        if (!resp.ok) {
+          console.error(`  [${name}] HTTP ${resp.status}`);
+          return [];
+        }
+        const xml = await resp.text();
+        const cutoff = Date.now() - VIDEO_FRESH_HOURS * 3_600_000;
+        const items: HotItem[] = [];
+        for (const raw of xml.split(/<entry>/).slice(1)) {
+          const block = "<x>" + raw;
+          const title = tag(block, "title");
+          const link = atomLink(block);
+          const pub = tag(block, "published");
+          const t = pub ? new Date(pub).getTime() : NaN;
+          if (!title || !link || isNaN(t) || t < cutoff) continue;
+          const views = Number(block.match(/<media:statistics[^>]*views="(\d+)"/)?.[1] ?? 0);
+          items.push({
+            source: name,
+            kind: "video",
+            title,
+            url: link,
+            score: views,
+            comments: 0,
+            publishedAt: new Date(t).toISOString(),
+            tags: [],
+            brief: tag(block, "media:description").slice(0, 160),
+            lang: "en",
+            pureAi: true, // 均为 AI 专属频道
+          });
+        }
+        console.log(`  [${name}] ${items.length} 条`);
+        return items;
+      } catch (err) {
+        console.error(`  [${name}] 抓取失败: ${err}`);
+        return [];
+      }
+    }),
+  );
+  return all.flat();
+}
+
+interface BiliVideo {
+  bvid: string;
+  title: string;
+  desc?: string;
+  pubdate: number;
+  tname?: string;
+  owner?: { name?: string };
+  stat?: { view?: number; like?: number; reply?: number };
+}
+
+async function fetchBilibili(): Promise<HotItem[]> {
+  const endpoints = [
+    { label: "热门", url: "https://api.bilibili.com/x/web-interface/popular?ps=50" },
+    { label: "科技榜", url: "https://api.bilibili.com/x/web-interface/ranking/v2?rid=188&type=all" },
+    // 知识区是 B站 AI 科普/教程内容的主阵地
+    { label: "知识榜", url: "https://api.bilibili.com/x/web-interface/ranking/v2?rid=36&type=all" },
+  ];
+  const seen = new Map<string, HotItem>();
+  const cutoff = Date.now() - VIDEO_FRESH_HOURS * 3_600_000;
+  await Promise.all(
+    endpoints.map(async ({ label, url }) => {
+      try {
+        const resp = await fetch(url, {
+          headers: { "User-Agent": UA, Referer: "https://www.bilibili.com" },
+        });
+        if (!resp.ok) {
+          console.error(`  [B站·${label}] HTTP ${resp.status}`);
+          return;
+        }
+        const data = (await resp.json()) as { code: number; data?: { list?: BiliVideo[] } };
+        if (data.code !== 0) {
+          console.error(`  [B站·${label}] code ${data.code}`);
+          return;
+        }
+        for (const v of data.data?.list ?? []) {
+          if (!v.bvid || seen.has(v.bvid)) continue;
+          const t = (v.pubdate ?? 0) * 1000;
+          if (t < cutoff) continue;
+          seen.set(v.bvid, {
+            source: "B站",
+            kind: "video",
+            title: v.title,
+            url: `https://www.bilibili.com/video/${v.bvid}`,
+            score: v.stat?.like ?? 0,
+            comments: v.stat?.reply ?? 0,
+            publishedAt: new Date(t).toISOString(),
+            tags: v.tname ? [v.tname] : [],
+            brief: (v.desc ?? "").slice(0, 160),
+            lang: "zh",
+            pureAi: false, // 热门/科技榜混杂，走 AI 相关性门槛
+          });
+        }
+      } catch (err) {
+        console.error(`  [B站·${label}] 抓取失败: ${err}`);
+      }
+    }),
+  );
+  const items = [...seen.values()];
+  console.log(`  [B站] ${items.length} 条（去重后，AI 过滤在后续降噪步骤）`);
+  return items;
+}
+
+// ---------------------------------------------------------------------------
 // 各源定义
 // ---------------------------------------------------------------------------
 
@@ -185,15 +307,17 @@ const FEEDS: Array<{ name: string; url: string; opts: RssOpts }> = [
 // ---------------------------------------------------------------------------
 
 export async function fetchAllHot(): Promise<{ items: HotItem[]; okSources: string[] }> {
-  const [feedResults, hn, arxiv, devto, cn] = await Promise.all([
+  const [feedResults, hn, arxiv, devto, cn, yt, bili] = await Promise.all([
     Promise.all(FEEDS.map((f) => fetchFeed(f.name, f.url, f.opts))),
     fetchHnData().catch(() => ({ stories: [], fetchSuccess: false })),
     fetchArxivData().catch(() => ({ papers: [], fetchSuccess: false })),
     fetchDevtoData().catch(() => ({ articles: [], fetchSuccess: false })),
     fetchAllCn().catch(() => ({ links: [], okSources: [] as string[] })),
+    fetchYouTube().catch(() => [] as HotItem[]),
+    fetchBilibili().catch(() => [] as HotItem[]),
   ]);
 
-  const items: HotItem[] = feedResults.flat();
+  const items: HotItem[] = [...feedResults.flat(), ...yt, ...bili];
 
   for (const s of hn.stories)
     items.push({

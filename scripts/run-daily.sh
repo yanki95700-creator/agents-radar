@@ -9,6 +9,15 @@ PROJECT="/Users/yink/Desktop/预备/信息雷达"
 # 只需保证 PATH 里有 node（/usr/local/bin）。
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
+# 代理适配：Node 的 fetch 默认不读代理环境变量（curl 会读），需 NODE_USE_ENV_PROXY=1。
+# launchd 环境没有代理变量 → 探测本机 Clash 端口(7890)，在线才启用，离线则直连（国内源不受影响）。
+export NODE_USE_ENV_PROXY=1
+if /usr/bin/nc -z 127.0.0.1 7890 2>/dev/null; then
+  export HTTP_PROXY="${HTTP_PROXY:-http://127.0.0.1:7890}"
+  export HTTPS_PROXY="${HTTPS_PROXY:-http://127.0.0.1:7890}"
+  export NO_PROXY="${NO_PROXY:-localhost,127.0.0.1,::1,.local}"
+fi
+
 cd "$PROJECT"
 mkdir -p logs
 

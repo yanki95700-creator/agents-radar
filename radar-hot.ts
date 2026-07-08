@@ -64,6 +64,7 @@ export interface HotEvent {
   pop: number; // 数字热度（成员最大）
   comments: number;
   lang: "zh" | "en";
+  isVideo: boolean; // 任一成员来自视频源（B站/YouTube）
   reason: string;
   reasonBy: "llm" | "local";
 }
@@ -198,7 +199,7 @@ function entityTags(title: string, brief: string): string[] {
 // 打分（0-100 精选分；跨源数是最强信号，与参考站一致）
 // ---------------------------------------------------------------------------
 
-const KIND_AUTH: Record<string, number> = { official: 8, media: 5, cn: 4, community: 3 };
+const KIND_AUTH: Record<string, number> = { official: 8, media: 5, video: 5, cn: 4, community: 3 };
 
 function hoursSince(iso: string): number {
   const t = new Date(iso).getTime();
@@ -266,6 +267,7 @@ function applyMerges(events: HotEvent[], groups: number[][]): HotEvent[] {
       base.pop = Math.max(base.pop, m.pop);
       base.comments = Math.max(base.comments, m.comments);
       base.tags = [...new Set([...base.tags, ...m.tags])].slice(0, 4);
+      base.isVideo = base.isVideo || m.isVideo;
       absorbed.add(m.id);
     }
     // 每多一个信源 +14 分（与主打分同权重），封顶 100
@@ -413,6 +415,7 @@ async function main() {
       pop: best.score,
       comments: Math.max(...c.members.map((m) => m.comments)),
       lang: best.lang,
+      isVideo: c.members.some((m) => m.kind === "video"),
       reason: bits.join("；") || "值得关注的动态",
       reasonBy: "local",
     };
