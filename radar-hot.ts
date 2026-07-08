@@ -54,6 +54,7 @@ function isAiRelated(it: HotItem): boolean {
 export interface HotEvent {
   id: number;
   title: string; // 展示标题（取热度最高的成员）
+  titleZh?: string; // 英文事件的中文译题（--llm 时生成）
   url: string;
   publishedAt: string; // 最早成员时间
   category: string; // 板块：模型/产品/行业/论文/技巧/动态
@@ -206,27 +207,132 @@ function hoursSince(iso: string): number {
 }
 
 // ---------------------------------------------------------------------------
+// LLM：语义级事件合并（词面聚类抓不到的同事件异说法，含跨中英）
+// ---------------------------------------------------------------------------
+
+/** 多主题汇总帖（晚报/早报/盘点…）不参与事件合并——它们不是单一事件 */
+const ROUNDUP_RE = /晚报|早报|快讯|周报|月报|盘点|大事记|回顾|汇总|weekly|roundup|recap|digest/i;
+
+async function llmSemanticMerge(events: HotEvent[]): Promise<number[][]> {
+  try {
+    const { callLlm, parseLlmJson } = await import("./src/report.ts");
+    const list = events
+      .filter((e) => !ROUNDUP_RE.test(e.title))
+      .map((e) => `${e.id}. [${e.lang}] ${e.title}（源：${e.sources.map((s) => s.name).join("/")}）`)
+      .join("\n");
+    const prompt = `下面是今日 AI 资讯事件列表（每行：id. [语言] 标题（来源））。请找出**报道同一个具体新闻事件**的条目组（同一次发布/同一起事故/同一笔交易才算；中英文报道同一事件也算同组）。
+
+判定标准：仅当明确指向**同一次**具体发布/事故/交易时才算同组（官方公告与媒体报道同一次发布算同组）。主题相近但事件不同（两款不同模型各自发布、同一公司的两条不同新闻）绝不合并。每组通常只有 2-4 条。宁可漏合并，不要错合并；不确定就不合并。
+
+${list}
+
+只输出 JSON：由 id 组成的数组的数组，每组≥2个id，没有可合并的就输出 []。例：[[3,17],[5,42,88]]`;
+    const raw = await callLlm(prompt, 2048);
+    const groups = parseLlmJson<number[][]>(raw);
+    if (!Array.isArray(groups)) return [];
+    // 护栏①：单组 >6 条几乎必是错并，丢弃该组
+    return groups.filter((g) => Array.isArray(g) && g.length >= 2 && g.length <= 6);
+  } catch (err) {
+    console.error(`   [llm] 语义合并失败，跳过：${err}`);
+    return [];
+  }
+}
+
+/** 应用合并组：吸收成员进主事件，按新信源数重新计分 */
+function applyMerges(events: HotEvent[], groups: number[][]): HotEvent[] {
+  // 护栏②：合并总量超过事件数 25% = LLM 输出退化（如把所有条目并成一组），放弃本轮合并
+  const totalToAbsorb = groups.reduce((n, g) => n + Math.max(0, g.length - 1), 0);
+  if (totalToAbsorb > events.length * 0.25) {
+    console.error(`   [llm] 语义合并结果异常（拟吸收 ${totalToAbsorb}/${events.length} 条），放弃本轮合并`);
+    return events;
+  }
+  const byId = new Map(events.map((e) => [e.id, e]));
+  const absorbed = new Set<number>();
+  let applied = 0;
+  for (const g of groups) {
+    const members = g
+      .map((id) => byId.get(id))
+      .filter((e): e is HotEvent => !!e && !absorbed.has(e.id) && !ROUNDUP_RE.test(e.title));
+    if (members.length < 2) continue;
+    // 主事件：分最高者。主标题保持主成员原题（中文报道角度常不同，顶替易误导），
+    // 由译题环节生成忠实中文题；中文成员仍在信源列表可点。
+    const base = [...members].sort((a, b) => b.score - a.score)[0]!;
+    const prevSrc = base.sources.length;
+    const names = new Set(base.sources.map((s) => s.name));
+    for (const m of members) {
+      if (m === base) continue;
+      for (const s of m.sources) if (!names.has(s.name)) (names.add(s.name), base.sources.push(s));
+      base.publishedAt = m.publishedAt < base.publishedAt ? m.publishedAt : base.publishedAt;
+      base.pop = Math.max(base.pop, m.pop);
+      base.comments = Math.max(base.comments, m.comments);
+      base.tags = [...new Set([...base.tags, ...m.tags])].slice(0, 4);
+      absorbed.add(m.id);
+    }
+    // 每多一个信源 +14 分（与主打分同权重），封顶 100
+    base.score = Math.min(100, base.score + 14 * (base.sources.length - prevSrc));
+    applied++;
+  }
+  if (applied) console.log(`   语义合并生效 ${applied} 组，吸收 ${absorbed.size} 条`);
+  return events.filter((e) => !absorbed.has(e.id));
+}
+
+// ---------------------------------------------------------------------------
+// LLM：英文标题批量配中文译题（分批，每批 60 条）
+// ---------------------------------------------------------------------------
+
+async function llmTranslateTitles(events: HotEvent[]): Promise<void> {
+  const targets = events.filter((e) => e.lang === "en" && !e.titleZh);
+  if (!targets.length) return;
+  try {
+    const { callLlm } = await import("./src/report.ts");
+    for (let i = 0; i < targets.length; i += 60) {
+      const batch = targets.slice(i, i + 60);
+      const list = batch.map((e, j) => `${j}. ${e.title}`).join("\n");
+      const prompt = `把下面的英文 AI 资讯标题逐条翻译成中文新闻标题。要求：忠实原意、不夸张不标题党、每条≤30字；产品名/公司名/模型名保留原文（如 GPT-Live、Claude）。
+
+${list}
+
+输出格式：每行一条 "序号|中文标题"，不要输出其它任何内容。例：
+0|OpenAI 发布 GPT-Live 语音模型
+1|...`;
+      const raw = await callLlm(prompt, 4096);
+      for (const line of raw.split("\n")) {
+        const m = line.match(/^\s*(\d+)\s*\|(.+)$/);
+        if (m && batch[Number(m[1])]) batch[Number(m[1])]!.titleZh = m[2]!.trim();
+      }
+    }
+    console.log(`   译题完成 ${targets.filter((e) => e.titleZh).length}/${targets.length} 条`);
+  } catch (err) {
+    console.error(`   [llm] 译题失败，保留原文：${err}`);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // LLM：批量生成编辑体推荐理由（一次调用，JSON 返回）
 // ---------------------------------------------------------------------------
 
 async function llmReasons(events: HotEvent[]): Promise<Map<number, string>> {
   const out = new Map<number, string>();
   try {
-    const { callLlm, parseLlmJson } = await import("./src/report.ts");
+    const { callLlm } = await import("./src/report.ts");
     const list = events
       .map(
         (e, i) =>
           `${i}. [${e.category}] ${e.title}\n   信源(${e.sources.length}): ${e.sources.map((s) => s.name).join("、")}\n   摘要: ${(e as unknown as { brief?: string }).brief ?? ""}`,
       )
       .join("\n");
-    const prompt = `你是中文 AI 资讯主编。以下是今日打分最高的 ${events.length} 条 AI 热点事件。请为每条写一句 25-45 字的中文推荐理由：像资深编辑一样有观点、点出"为什么重要/对谁有用"，不要复述标题，不要空话。
+    const prompt = `你是中文 AI 资讯主编。以下是今日打分最高的 ${events.length} 条 AI 热点事件。请为每条写一句 25-45 字的中文推荐理由：像资深编辑一样有观点、点出"为什么重要/对谁有用"，不要复述标题，不要空话，不要使用引号。
 
 ${list}
 
-只输出 JSON 数组，格式：[{"i":0,"reason":"..."},...]`;
+输出格式：每行一条 "序号|推荐理由"，不要输出其它任何内容。例：
+0|全双工架构让 AI 终于能边听边说，做语音产品的团队该立刻评估。
+1|...`;
     const raw = await callLlm(prompt, 2048);
-    const arr = parseLlmJson<Array<{ i: number; reason: string }>>(raw);
-    for (const r of arr) if (typeof r?.i === "number" && r.reason) out.set(r.i, String(r.reason).trim());
+    for (const line of raw.split("\n")) {
+      const m = line.match(/^\s*(\d+)\s*\|(.+)$/);
+      if (m) out.set(Number(m[1]), m[2]!.trim());
+    }
   } catch (err) {
     console.error(`   [llm] 推荐理由生成失败，回退本地：${err}`);
   }
@@ -316,14 +422,25 @@ async function main() {
 
   events.sort((a, b) => b.score - a.score);
 
-  // TOP 3：先按信源数、再按分（参考站机制）
-  const top3 = [...events].sort((a, b) => b.sources.length - a.sources.length || b.score - a.score).slice(0, 3);
+  // ⑤ 语义级事件合并 + ⑥ 英文标题译题（均需 --llm）
+  let finalEvents = events;
+  if (useLlm) {
+    console.log("⑤ DeepSeek 语义级事件合并（同事件异说法/跨中英）...");
+    const groups = await llmSemanticMerge(finalEvents);
+    finalEvents = applyMerges(finalEvents, groups);
+    finalEvents.sort((a, b) => b.score - a.score);
+    console.log("⑥ DeepSeek 批量译题（英文标题 → 中文一句话）...");
+    await llmTranslateTitles(finalEvents);
+  }
 
-  // ⑤ LLM 推荐理由（精选前 12 条 + TOP3 去重合并）
-  const featured = events.slice(0, 12);
+  // TOP 3：先按信源数、再按分（参考站机制）
+  const top3 = [...finalEvents].sort((a, b) => b.sources.length - a.sources.length || b.score - a.score).slice(0, 3);
+
+  // ⑦ LLM 推荐理由（精选前 12 条 + TOP3 去重合并）
+  const featured = finalEvents.slice(0, 12);
   const llmTargets = [...new Set([...top3, ...featured])];
   if (useLlm) {
-    console.log(`⑤ DeepSeek 批量生成 ${llmTargets.length} 条编辑体推荐理由...`);
+    console.log(`⑦ DeepSeek 批量生成 ${llmTargets.length} 条编辑体推荐理由...`);
     const reasons = await llmReasons(llmTargets);
     llmTargets.forEach((e, i) => {
       const r = reasons.get(i);
@@ -338,12 +455,19 @@ async function main() {
   const dateStr = toCstDateStr(new Date());
   const bySrc: Record<string, number> = {};
   for (const it of clean) bySrc[it.source] = (bySrc[it.source] ?? 0) + 1;
+  const multiFinal = finalEvents.filter((e) => e.sources.length > 1).length;
   const payload = {
     generatedAt: new Date().toISOString(),
     dateStr,
-    stats: { raw: raw.length, clean: clean.length, events: events.length, multiSource: multi, sources: bySrc },
+    stats: {
+      raw: raw.length,
+      clean: clean.length,
+      events: finalEvents.length,
+      multiSource: multiFinal,
+      sources: bySrc,
+    },
     top3: top3.map((e) => e.id),
-    events: events.map((e) => ({ ...e, brief: undefined })),
+    events: finalEvents.map((e) => ({ ...e, brief: undefined })),
   };
   fs.mkdirSync("hot-data", { recursive: true });
   fs.writeFileSync(path.join("hot-data", "latest.json"), JSON.stringify(payload, null, 1), "utf-8");
@@ -352,15 +476,16 @@ async function main() {
   // 控制台摘要
   console.log(`\n══ 今日热点 TOP 3 ══`);
   top3.forEach((e, i) =>
-    console.log(` ${i + 1}. [${e.sources.length}信源|${e.score}分] ${e.title.slice(0, 50)}`),
+    console.log(` ${i + 1}. [${e.sources.length}信源|${e.score}分] ${(e.titleZh ?? e.title).slice(0, 50)}`),
   );
   console.log(`\n══ 精选前 10 ══`);
-  events.slice(0, 10).forEach((e, i) => {
-    console.log(` ${String(i + 1).padStart(2)}. 精选${e.score} [${e.category}] ${e.title.slice(0, 46)}`);
+  finalEvents.slice(0, 10).forEach((e, i) => {
+    console.log(` ${String(i + 1).padStart(2)}. 精选${e.score} [${e.category}] ${(e.titleZh ?? e.title).slice(0, 46)}`);
+    if (e.titleZh) console.log(`     原题: ${e.title.slice(0, 52)}`);
     console.log(`     💡 ${e.reason}`);
   });
   console.log(`\n✅ 完成，耗时 ${((Date.now() - t0) / 1000).toFixed(1)}s`);
-  console.log(`📄 hot-data/latest.json（${events.length} 个事件）→ 用 hot.html 浏览`);
+  console.log(`📄 hot-data/latest.json（${finalEvents.length} 个事件）→ 用 hot.html 浏览`);
 }
 
 main().catch((err) => {

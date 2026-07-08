@@ -87,6 +87,10 @@ bash scripts/run-full.sh          # 报告写到 digests/YYYY-MM-DD/
 
 - 信息源：OpenAI/Google/HuggingFace 官方博客 + The Verge/TechCrunch/The Decoder/Ars Technica/IT之家/爱范儿 + HN/arXiv/Dev.to + 掘金/量子位/36氪/少数派/InfoQ
 - 板块：精选 / 全部 / 模型 / 产品 / 行业 / 论文 / 技巧 / 动态
+- `--llm` 时额外做（DeepSeek，每天几分钱）：
+  - **语义级事件合并**：换了说法/跨中英的同一事件也聚成一卡（带护栏：单组≤6、总吸收≤25%，防 LLM 退化输出；汇总帖不参与合并）
+  - **英文标题配中文译题**：卡片中文题为主、英文原题为副
+  - **编辑体推荐理由**：TOP3 + 精选前 12
 - 生成数据：`./node_modules/.bin/tsx radar-hot.ts --llm`（写 `hot-data/latest.json`，每日定时任务已包含）
 
 ## 三·五、用网页浏览报告

@@ -57,6 +57,7 @@
   .s-mid  { color: var(--mid);  border-color: #8fa8d833; background: #8fa8d80d; }
   .c-title { font-size: 15.5px; font-weight: 600; line-height: 1.45; }
   .c-title:hover { color: var(--accent); }
+  .c-orig { display: block; margin-top: 2px; font-size: 12px; color: var(--dim); font-weight: 400; line-height: 1.4; }
   .c-meta { margin-top: 3px; font-size: 12px; color: var(--dim); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   .cat { padding: 0 8px; border-radius: 5px; background: var(--bg-chip); border: 1px solid var(--border); color: var(--accent2); font-size: 11px; }
   .reason { margin-top: 9px; padding: 8px 12px; background: #e8a33d0a; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; color: #cfc4a8; font-size: 13.5px; }
@@ -124,7 +125,7 @@ function card(e) {
     <div class="c-head">
       <div class="score ${scoreCls(e.score)}"><b>${e.score}</b>精选</div>
       <div style="flex:1;min-width:0">
-        <a class="c-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a>
+        <a class="c-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.titleZh || e.title)}${e.titleZh ? `<span class="c-orig">${esc(e.title)}</span>` : ""}</a>
         <div class="c-meta">
           <span>${relTime(e.publishedAt)}</span>
           <span class="cat">${e.category}</span>
@@ -153,7 +154,7 @@ function render() {
   if (cat === "精选" || cat === "全部") {
     const t3 = DATA.top3.map((id) => DATA.events.find((e) => e.id === id)).filter(Boolean);
     html += `<div class="top3"><h2>🔥 今日热点 TOP 3</h2>` + t3.map((e, i) =>
-      `<div class="t3row"><span class="t3rank">${i + 1}</span><a class="t3title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a><span class="t3meta">${e.sources.length} 信源 · ${relTime(e.publishedAt)}</span></div>`,
+      `<div class="t3row"><span class="t3rank">${i + 1}</span><a class="t3title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.titleZh || e.title)}</a><span class="t3meta">${e.sources.length} 信源 · ${relTime(e.publishedAt)}</span></div>`,
     ).join("") + `</div>`;
   }
 
