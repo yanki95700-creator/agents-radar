@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   weekly:
+    if: github.repository_owner == 'duanyytop'
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
