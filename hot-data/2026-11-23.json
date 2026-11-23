@@ -1,0 +1,3439 @@
+{
+ "generatedAt": "2026-11-23T07:57:24.827Z",
+ "dateStr": "2026-11-23",
+ "stats": {
+  "raw": 330,
+  "clean": 169,
+  "events": 151,
+  "multiSource": 1,
+  "sources": {
+   "OpenAI 官方": 2,
+   "The Verge AI": 10,
+   "TechCrunch AI": 12,
+   "The Decoder": 10,
+   "Ars Technica AI": 3,
+   "IT之家": 7,
+   "爱范儿": 11,
+   "YouTube·OpenAI": 15,
+   "YouTube·DeepMind": 3,
+   "YouTube·两分钟论文": 2,
+   "B站": 4,
+   "微博热搜": 1,
+   "知乎热榜": 4,
+   "Hacker News": 17,
+   "Dev.to": 20,
+   "掘金": 20,
+   "量子位": 10,
+   "少数派": 3,
+   "InfoQ": 15
+  }
+ },
+ "top3": [
+  55,
+  61,
+  108
+ ],
+ "events": [
+  {
+   "id": 55,
+   "title": "GPT-6.2 Astra and GPT-6.2 Sol—Models built for the real world",
+   "url": "https://www.youtube.com/watch?v=C1zYX5jwqq4",
+   "publishedAt": "2026-11-17T09:45:35.000Z",
+   "category": "论文",
+   "tags": [
+    "OpenAI",
+    "Google",
+    "智能体",
+    "语音"
+   ],
+   "sources": [
+    {
+     "name": "YouTube·OpenAI",
+     "url": "https://www.youtube.com/watch?v=mX7wHNnsghs"
+    },
+    {
+     "name": "YouTube·DeepMind",
+     "url": "https://www.youtube.com/watch?v=FORdPIWOH5k"
+    },
+    {
+     "name": "YouTube·两分钟论文",
+     "url": "https://www.youtube.com/watch?v=Cy7Wz6Z4TWU"
+    }
+   ],
+   "score": 77,
+   "pop": 360951,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": true,
+   "reason": "3 个信源同时报道；YouTube·OpenAI 热度 360951",
+   "reasonBy": "local"
+  },
+  {
+   "id": 61,
+   "title": "陶哲轩称没从AI证明中学到数学",
+   "url": "https://s.weibo.com/weibo?q=%23%E9%99%B6%E5%93%B2%E8%BD%A9%E7%A7%B0%E6%B2%A1%E4%BB%8EAI%E8%AF%81%E6%98%8E%E4%B8%AD%E5%AD%A6%E5%88%B0%E6%95%B0%E5%AD%A6%23",
+   "publishedAt": "2026-11-23T07:57:19.003Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "微博热搜",
+     "url": "https://s.weibo.com/weibo?q=%23%E9%99%B6%E5%93%B2%E8%BD%A9%E7%A7%B0%E6%B2%A1%E4%BB%8EAI%E8%AF%81%E6%98%8E%E4%B8%AD%E5%AD%A6%E5%88%B0%E6%95%B0%E5%AD%A6%23"
+    }
+   ],
+   "score": 70,
+   "pop": 126712,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "微博热搜 热度 126712；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 108,
+   "title": "折腾一年，我们正式发布 JitOffice：一款跑在浏览器里的 AI Office",
+   "url": "https://juejin.cn/post/7710636227041935370",
+   "publishedAt": "2026-11-23T01:48:14.000Z",
+   "category": "产品",
+   "tags": [],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710636227041935370"
+    }
+   ],
+   "score": 65,
+   "pop": 4,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 4",
+   "reasonBy": "local"
+  },
+  {
+   "id": 88,
+   "title": "Three Agents, One Repo: The Coordination Problem Nobody Designed For",
+   "url": "https://dev.to/debashish_ghosal/three-agents-one-repo-the-coordination-problem-nobody-designed-for-4ag3",
+   "publishedAt": "2026-11-23T07:00:00Z",
+   "category": "动态",
+   "tags": [
+    "智能体",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/debashish_ghosal/three-agents-one-repo-the-coordination-problem-nobody-designed-for-4ag3"
+    }
+   ],
+   "score": 61,
+   "pop": 11,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 11；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 92,
+   "title": "Build without limits - SDLC Briefing, #7",
+   "url": "https://dev.to/indiciumai/build-without-limits-sdlc-briefing-7-2853",
+   "publishedAt": "2026-11-23T07:55:14Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/indiciumai/build-without-limits-sdlc-briefing-7-2853"
+    }
+   ],
+   "score": 60,
+   "pop": 8,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 8；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 63,
+   "title": "OpenAI 首次公开内部 log-perplexity 数据，这对理解大模型能力演进有什么意义？",
+   "url": "https://www.zhihu.com/question/2108089769834066000",
+   "publishedAt": "2026-11-22T22:49:27.000Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI"
+   ],
+   "sources": [
+    {
+     "name": "知乎热榜",
+     "url": "https://www.zhihu.com/question/2108089769834066000"
+    }
+   ],
+   "score": 58,
+   "pop": 1140000,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "知乎热榜 热度 1140000",
+   "reasonBy": "local"
+  },
+  {
+   "id": 83,
+   "title": "3Draft: Five Percent — 30 Minutes to Deadline",
+   "url": "https://dev.to/pengeszikra/3draft-five-percent-30-minutes-to-deadline-1kfk",
+   "publishedAt": "2026-11-22T15:53:46Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/pengeszikra/3draft-five-percent-30-minutes-to-deadline-1kfk"
+    }
+   ],
+   "score": 58,
+   "pop": 22,
+   "comments": 7,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 22",
+   "reasonBy": "local"
+  },
+  {
+   "id": 93,
+   "title": "Enterprise Agent Permission Matrix: 12 Controls Before Production API Access",
+   "url": "https://dev.to/quokkalabs/enterprise-agent-permission-matrix-12-controls-before-production-api-access-34hn",
+   "publishedAt": "2026-11-23T06:08:52Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/quokkalabs/enterprise-agent-permission-matrix-12-controls-before-production-api-access-34hn"
+    }
+   ],
+   "score": 58,
+   "pop": 7,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 7；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 111,
+   "title": "七家中国 AI 公司被控「蒸馏」Claude：模型蒸馏的原理、攻防与争议全解（附一手资料截图）",
+   "url": "https://juejin.cn/post/7710853195052990499",
+   "publishedAt": "2026-11-23T01:34:22.000Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic",
+    "DeepSeek",
+    "Kimi"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710853195052990499"
+    }
+   ],
+   "score": 58,
+   "pop": 2,
+   "comments": 1,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 2",
+   "reasonBy": "local"
+  },
+  {
+   "id": 114,
+   "title": "概率性计算的系统工程：从 Super-agent 与 Octop 看多 Agent 架构的收敛",
+   "url": "https://juejin.cn/post/7710853195053350947",
+   "publishedAt": "2026-11-23T02:06:44.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710853195053350947"
+    }
+   ],
+   "score": 58,
+   "pop": 2,
+   "comments": 1,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 2；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 119,
+   "title": "Agent 接了上百个工具就变慢变贵？Gemini 把工具加载改成了按需检索",
+   "url": "https://juejin.cn/post/7710701905597186063",
+   "publishedAt": "2026-11-22T20:13:01.000Z",
+   "category": "动态",
+   "tags": [
+    "Google",
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710701905597186063"
+    }
+   ],
+   "score": 58,
+   "pop": 3,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 37,
+   "title": "3399 元起荣耀 700 / 700S / Pro 系列手机发布：AI 灵动背屏、支持长焦增距镜",
+   "url": "https://www.ithome.com/1/030/931.htm",
+   "publishedAt": "2026-11-23T07:44:22.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/030/931.htm"
+    }
+   ],
+   "score": 57,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 38,
+   "title": "阿里云：AgentLoop 记忆库、经验库及优化任务功能 12 月 7 日起收费，按 AI Credits 实际消耗量计费",
+   "url": "https://www.ithome.com/1/030/926.htm",
+   "publishedAt": "2026-11-23T07:36:19.000Z",
+   "category": "产品",
+   "tags": [
+    "阿里",
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/030/926.htm"
+    }
+   ],
+   "score": 57,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 39,
+   "title": "美国加州总检察长起诉 OpenAI，指控其忽视安全风险",
+   "url": "https://www.ithome.com/1/030/921.htm",
+   "publishedAt": "2026-11-23T07:25:21.000Z",
+   "category": "行业",
+   "tags": [
+    "OpenAI",
+    "安全"
+   ],
+   "sources": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/030/921.htm"
+    }
+   ],
+   "score": 57,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 85,
+   "title": "The $2,400 Auto Repair Estimate Nobody Can Read. I Built the Decoder That Doesn't Guess Prices.",
+   "url": "https://dev.to/debashish_ghosal/the-2400-auto-repair-estimate-nobody-can-read-i-built-the-decoder-that-doesnt-guess-prices-295p",
+   "publishedAt": "2026-11-22T23:21:13Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/debashish_ghosal/the-2400-auto-repair-estimate-nobody-can-read-i-built-the-decoder-that-doesnt-guess-prices-295p"
+    }
+   ],
+   "score": 57,
+   "pop": 13,
+   "comments": 2,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 13",
+   "reasonBy": "local"
+  },
+  {
+   "id": 107,
+   "title": "电脑操作AI超越人类了？这款开源Agent吊打GPT、Claude全自动操控电脑",
+   "url": "https://juejin.cn/post/7711164513240072192",
+   "publishedAt": "2026-11-23T05:33:19.000Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI",
+    "Anthropic",
+    "智能体",
+    "开源"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7711164513240072192"
+    }
+   ],
+   "score": 57,
+   "pop": 1,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 1；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 40,
+   "title": "韩国首颗自主导航定位卫星即将进入制作组装阶段，计划 2029 年发射",
+   "url": "https://www.ithome.com/1/030/920.htm",
+   "publishedAt": "2026-11-23T07:22:05.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/030/920.htm"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 41,
+   "title": "荣耀 700 / Pro 手机配备 1.59 英寸 AI 灵动背屏：行业首发 AI 定制随心贴、背屏任意贴",
+   "url": "https://www.ithome.com/1/030/918.htm",
+   "publishedAt": "2026-11-23T07:20:43.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/030/918.htm"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 42,
+   "title": "黑客利用 AI 工具发现医疗软件零日漏洞，成功控制目标服务器",
+   "url": "https://www.ithome.com/1/030/917.htm",
+   "publishedAt": "2026-11-23T07:20:10.000Z",
+   "category": "产品",
+   "tags": [
+    "安全"
+   ],
+   "sources": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/030/917.htm"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 43,
+   "title": "新款深蓝 L07 车型将于 11 月 27 日广州车展亮相：采用 800V 高压平台、搭载豆包大模型",
+   "url": "https://www.ithome.com/1/030/911.htm",
+   "publishedAt": "2026-11-23T07:04:00.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/030/911.htm"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 136,
+   "title": "Agent不再只写代码，亚马逊云科技瞄准三个新难题",
+   "url": "https://www.infoq.cn/article/4cFZ1bATcXRJaGPFoF7z?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-23T15:37:03.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/4cFZ1bATcXRJaGPFoF7z?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 137,
+   "title": "安谋科技发布“星辰100e” AIoT 原型平台，AI推理性能最高提升 340 倍",
+   "url": "https://www.infoq.cn/article/pdjVKiH3ONYjePlUDufv?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-23T14:22:11.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/pdjVKiH3ONYjePlUDufv?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 138,
+   "title": "亚马逊云科技推出Well-Architected Agent预览版",
+   "url": "https://www.infoq.cn/article/LQuPgS5lcFDMEKhZSP5d?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-23T14:16:59.000Z",
+   "category": "产品",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/LQuPgS5lcFDMEKhZSP5d?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 139,
+   "title": "姚顺雨团队回应一切：下一代混元将大幅扩参，RSI 仍处早期，最难解决的是“想太多”",
+   "url": "https://www.infoq.cn/article/b4QKbFZaXvbK9hzcBhZV?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-23T14:10:06.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/b4QKbFZaXvbK9hzcBhZV?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 140,
+   "title": "「AI 圈有局」第 01 期｜5 场活动、12 个社区找到你的同路人",
+   "url": "https://www.infoq.cn/article/uEfN9kdGsIMGkOgidVG7?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-23T11:42:35.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/uEfN9kdGsIMGkOgidVG7?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 141,
+   "title": "具身智能进入大浪淘沙阶段，企业需要怎样的人才？",
+   "url": "https://www.infoq.cn/article/a22y9GDY1yHuAJkOIF8z?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-23T10:48:34.000Z",
+   "category": "动态",
+   "tags": [
+    "机器人"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/a22y9GDY1yHuAJkOIF8z?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 142,
+   "title": "Anthropic 创纪录 IPO 未能扭转 AI 市场悲观情绪，Claude 上市当天突发性能降级！靠失业焦虑撑起的万亿估值，该踩刹车了",
+   "url": "https://www.infoq.cn/article/OPbZhT0OHL4IbZz8exvA?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-23T09:20:56.000Z",
+   "category": "行业",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/OPbZhT0OHL4IbZz8exvA?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 56,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 44,
+   "title": "鸿蒙版醒图新版本上线：AI修图「不烧心」",
+   "url": "https://www.ifanr.com/1690991?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-23T06:07:33.000Z",
+   "category": "产品",
+   "tags": [],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690991?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 55,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 66,
+   "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+   "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+   "publishedAt": "2026-11-22T08:57:34Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/"
+    }
+   ],
+   "score": 55,
+   "pop": 954,
+   "comments": 945,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 954",
+   "reasonBy": "local"
+  },
+  {
+   "id": 94,
+   "title": "AI in a CMS admin: four providers over plain fetch, a daily limit, and translation that keeps the bold",
+   "url": "https://dev.to/kanawoot_korsang_5be7c94a/ai-in-a-cms-admin-four-providers-over-plain-fetch-a-daily-limit-and-translation-that-keeps-the-12nl",
+   "publishedAt": "2026-11-23T02:43:23Z",
+   "category": "产品",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/kanawoot_korsang_5be7c94a/ai-in-a-cms-admin-four-providers-over-plain-fetch-a-daily-limit-and-translation-that-keeps-the-12nl"
+    }
+   ],
+   "score": 55,
+   "pop": 7,
+   "comments": 2,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 7；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 103,
+   "title": "Agent开发工程师-学习大纲",
+   "url": "https://juejin.cn/post/7711164513240612864",
+   "publishedAt": "2026-11-23T06:29:33.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7711164513240612864"
+    }
+   ],
+   "score": 55,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 104,
+   "title": "AI Memory 的下一步：从记住信息，到真正理解一个人",
+   "url": "https://juejin.cn/post/7711008591050457126",
+   "publishedAt": "2026-11-23T07:19:59.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7711008591050457126"
+    }
+   ],
+   "score": 55,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 112,
+   "title": "大模型底层原理解析：注意力机制与 KV Cache 如何影响成本和速度",
+   "url": "https://juejin.cn/post/7710865418697244714",
+   "publishedAt": "2026-11-23T02:17:04.000Z",
+   "category": "技巧",
+   "tags": [],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710865418697244714"
+    }
+   ],
+   "score": 55,
+   "pop": 1,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 1；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 113,
+   "title": "LoopForge：把团队的交付经验变成可执行的工程资产",
+   "url": "https://juejin.cn/post/7710761549636665379",
+   "publishedAt": "2026-11-23T02:50:55.000Z",
+   "category": "动态",
+   "tags": [
+    "编码",
+    "开源"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710761549636665379"
+    }
+   ],
+   "score": 55,
+   "pop": 1,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 1；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 116,
+   "title": "同一个模型，为什么还要专门练一遍怎么用工具？",
+   "url": "https://juejin.cn/post/7711011640771035187",
+   "publishedAt": "2026-11-23T03:01:40.000Z",
+   "category": "技巧",
+   "tags": [],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7711011640771035187"
+    }
+   ],
+   "score": 55,
+   "pop": 1,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 1；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 117,
+   "title": "两个 Agent 各自改得都对，合在一起为什么出错？",
+   "url": "https://juejin.cn/post/7710978034816024602",
+   "publishedAt": "2026-11-23T02:22:44.000Z",
+   "category": "技巧",
+   "tags": [
+    "智能体",
+    "芯片算力"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710978034816024602"
+    }
+   ],
+   "score": 55,
+   "pop": 1,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 1；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 122,
+   "title": "workbuddy可以操控电脑！真的太省心了，AI博主利器啊",
+   "url": "https://juejin.cn/post/7710647322555760691",
+   "publishedAt": "2026-11-22T14:26:01.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710647322555760691"
+    }
+   ],
+   "score": 55,
+   "pop": 3,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 82,
+   "title": "HAproxy lead: On the use of AI-based tools to find bugs in open source software",
+   "url": "https://www.haproxy.com/blog/on-the-use-of-ai-based-tools-to-find-bugs-in-open-source-software",
+   "publishedAt": "2026-11-23T07:10:09Z",
+   "category": "动态",
+   "tags": [
+    "开源"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://www.haproxy.com/blog/on-the-use-of-ai-based-tools-to-find-bugs-in-open-source-software"
+    }
+   ],
+   "score": 54,
+   "pop": 3,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 3；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 105,
+   "title": "PC党太无聊了，用 Opus5.5 挑战下 GTA6！",
+   "url": "https://juejin.cn/post/7710639091190464547",
+   "publishedAt": "2026-11-23T06:03:55.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710639091190464547"
+    }
+   ],
+   "score": 54,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 106,
+   "title": "2 个 Skill，帮你去除文档和网页中的 “AI 味”",
+   "url": "https://juejin.cn/post/7710901773549486107",
+   "publishedAt": "2026-11-23T05:34:29.000Z",
+   "category": "技巧",
+   "tags": [],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710901773549486107"
+    }
+   ],
+   "score": 54,
+   "pop": 0,
+   "comments": 1,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 77,
+   "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+   "url": "https://www.bbc.com/news/articles/cqe9k09j9jv4o",
+   "publishedAt": "2026-11-23T05:06:12Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://www.bbc.com/news/articles/cqe9k09j9jv4o"
+    }
+   ],
+   "score": 53,
+   "pop": 4,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 4；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 84,
+   "title": "I built AI agents that apply to jobs. The forms were harder than the AI.",
+   "url": "https://dev.to/hirescoot/i-built-ai-agents-that-apply-to-jobs-the-forms-were-harder-than-the-ai-37h4",
+   "publishedAt": "2026-11-22T12:40:54Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/hirescoot/i-built-ai-agents-that-apply-to-jobs-the-forms-were-harder-than-the-ai-37h4"
+    }
+   ],
+   "score": 53,
+   "pop": 16,
+   "comments": 11,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 16",
+   "reasonBy": "local"
+  },
+  {
+   "id": 12,
+   "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+   "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+   "publishedAt": "2026-11-23T01:25:53.000Z",
+   "category": "行业",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/"
+    }
+   ],
+   "score": 52,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 109,
+   "title": "A2UI 1.0：Agent 画的 UI，6 端都能原生渲染了！",
+   "url": "https://juejin.cn/post/7711033019449262130",
+   "publishedAt": "2026-11-23T02:52:48.000Z",
+   "category": "技巧",
+   "tags": [
+    "Google",
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7711033019449262130"
+    }
+   ],
+   "score": 52,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 110,
+   "title": "Gemini 4 Neon+Antigravity，干活真猛啊。",
+   "url": "https://juejin.cn/post/7710893312785465387",
+   "publishedAt": "2026-11-23T02:50:15.000Z",
+   "category": "动态",
+   "tags": [
+    "Google",
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710893312785465387"
+    }
+   ],
+   "score": 52,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 115,
+   "title": "只防提示注入，等于门锁好了窗户全开——给 AI 应用画一张威胁地图（S01）",
+   "url": "https://juejin.cn/post/7710812195094331392",
+   "publishedAt": "2026-11-23T03:25:46.000Z",
+   "category": "产品",
+   "tags": [
+    "安全"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710812195094331392"
+    }
+   ],
+   "score": 52,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 118,
+   "title": "Agent Harness 工程（I7）：观测与评测——把运行变成可复现读数",
+   "url": "https://juejin.cn/post/7710636227040608266",
+   "publishedAt": "2026-11-22T14:59:58.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710636227040608266"
+    }
+   ],
+   "score": 52,
+   "pop": 2,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "掘金 热度 2",
+   "reasonBy": "local"
+  },
+  {
+   "id": 121,
+   "title": "CLAUDE.md、AGENTS.md、Skill 冲突时听谁的：Claude Code 与 Codex 指令优先级实测",
+   "url": "https://juejin.cn/post/7710893312785563691",
+   "publishedAt": "2026-11-23T03:04:50.000Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic",
+    "智能体",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710893312785563691"
+    }
+   ],
+   "score": 52,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 45,
+   "title": "华为OSTA星芒 O1 Pro 评测：一台真正为 AI 而生的鸿蒙手机",
+   "url": "https://www.ifanr.com/1690613?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-23T00:57:34.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690613?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 51,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 46,
+   "title": "早报｜曝苹果明年下半年发布iPhone 20与智能眼镜/丘成桐：AI证明黎曼猜想，数学进入新纪元/GTA6带动主机溢价，PS5 Pro涨至近1.6万元",
+   "url": "https://www.ifanr.com/1690857?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-23T00:25:24.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690857?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 51,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 75,
+   "title": "VistaPrint applies generative AI edits to prints without consent or warning",
+   "url": "https://bsky.app/profile/mostlybree.kitrocha.com/post/3n2vxgsvrhs2q",
+   "publishedAt": "2026-11-23T02:30:24Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://bsky.app/profile/mostlybree.kitrocha.com/post/3n2vxgsvrhs2q"
+    }
+   ],
+   "score": 51,
+   "pop": 5,
+   "comments": 1,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 5；刚刚发生",
+   "reasonBy": "local"
+  },
+  {
+   "id": 86,
+   "title": "Build a Multilingual React Editor with Chrome’s Built-In AI",
+   "url": "https://dev.to/gde/build-a-multilingual-react-editor-with-chromes-built-in-ai-4863",
+   "publishedAt": "2026-11-22T14:10:00Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/gde/build-a-multilingual-react-editor-with-chromes-built-in-ai-4863"
+    }
+   ],
+   "score": 51,
+   "pop": 12,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 12",
+   "reasonBy": "local"
+  },
+  {
+   "id": 89,
+   "title": "Apoorv Karanwal: I Built a Social Media App from Scratch 🚀",
+   "url": "https://dev.to/apoorv_karanwal/apoorv-karanwal-i-built-a-social-media-app-from-scratch-51jp",
+   "publishedAt": "2026-11-22T15:49:27Z",
+   "category": "产品",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/apoorv_karanwal/apoorv-karanwal-i-built-a-social-media-app-from-scratch-51jp"
+    }
+   ],
+   "score": 51,
+   "pop": 10,
+   "comments": 1,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 10",
+   "reasonBy": "local"
+  },
+  {
+   "id": 2,
+   "title": "We haven’t seen the last of the major tech outages",
+   "url": "https://www.theverge.com/tech/1039851/major-tech-outages",
+   "publishedAt": "2026-11-22T22:48:02.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/tech/1039851/major-tech-outages"
+    }
+   ],
+   "score": 50,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 47,
+   "title": "iPhone 18 大更新，明年春天见！但苹果的挑战才刚刚开始",
+   "url": "https://www.ifanr.com/1690832?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-22T22:19:08.000Z",
+   "category": "产品",
+   "tags": [],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690832?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 50,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 59,
+   "title": "真相，假是假了点，但看了不烧心。",
+   "url": "https://www.bilibili.com/video/BV1tdypzgEx2",
+   "publishedAt": "2026-11-20T11:27:40.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "B站",
+     "url": "https://www.bilibili.com/video/BV1tdypzgEx2"
+    }
+   ],
+   "score": 50,
+   "pop": 153610,
+   "comments": 2623,
+   "lang": "zh",
+   "isVideo": true,
+   "reason": "B站 热度 153610",
+   "reasonBy": "local"
+  },
+  {
+   "id": 67,
+   "title": "Dario Amodei suggests video games could pacify the masses after AI takes jobs",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1039745/dario-amodei-video-games-ai-joblessness",
+   "publishedAt": "2026-11-23T01:45:50Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1039745/dario-amodei-video-games-ai-joblessness"
+    }
+   ],
+   "score": 50,
+   "pop": 12,
+   "comments": 8,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 12",
+   "reasonBy": "local"
+  },
+  {
+   "id": 133,
+   "title": "派早报：Anthropic 研究员宣称用 Claude 证明黎曼猜想",
+   "url": "https://sspai.com/post/119418",
+   "publishedAt": "2026-11-22T23:34:27.000Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI",
+    "Anthropic",
+    "安全"
+   ],
+   "sources": [
+    {
+     "name": "少数派",
+     "url": "https://sspai.com/post/119418"
+    }
+   ],
+   "score": 50,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 13,
+   "title": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+   "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+   "publishedAt": "2026-11-22T21:14:07.000Z",
+   "category": "技巧",
+   "tags": [
+    "OpenAI"
+   ],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/"
+    }
+   ],
+   "score": 49,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 58,
+   "title": "《520AM》司凤版⚡思罢吗乐队激情演奏！小时候这集听哭了😭【AI MV大赛】",
+   "url": "https://www.bilibili.com/video/BV1vQybzKEhr",
+   "publishedAt": "2026-11-21T06:11:45.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "B站",
+     "url": "https://www.bilibili.com/video/BV1vQybzKEhr"
+    }
+   ],
+   "score": 49,
+   "pop": 123825,
+   "comments": 5010,
+   "lang": "zh",
+   "isVideo": true,
+   "reason": "B站 热度 123825",
+   "reasonBy": "local"
+  },
+  {
+   "id": 62,
+   "title": "DeepSeek 推出限额规则，不少重度免费用户主动求付费保留长对话，这暴露出哪些行业现实问题？",
+   "url": "https://www.zhihu.com/question/2107183345205626400",
+   "publishedAt": "2026-11-20T10:47:39.000Z",
+   "category": "产品",
+   "tags": [
+    "DeepSeek"
+   ],
+   "sources": [
+    {
+     "name": "知乎热榜",
+     "url": "https://www.zhihu.com/question/2107183345205626400"
+    }
+   ],
+   "score": 49,
+   "pop": 1830000,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "知乎热榜 热度 1830000",
+   "reasonBy": "local"
+  },
+  {
+   "id": 70,
+   "title": "You couldn't have proved the Riemann hypothesis on a $200/month Claude/GPT plan",
+   "url": "https://greyenlightenment.com/2026/11/20/the-riemann-hypothesis-and-the-industrialization-of-mathematics/",
+   "publishedAt": "2026-11-23T00:17:57Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI",
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://greyenlightenment.com/2026/11/20/the-riemann-hypothesis-and-the-industrialization-of-mathematics/"
+    }
+   ],
+   "score": 49,
+   "pop": 6,
+   "comments": 3,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 6",
+   "reasonBy": "local"
+  },
+  {
+   "id": 87,
+   "title": "Local AI Code Review Before a PR: Tools That Catch Bugs Before You Push",
+   "url": "https://dev.to/dev_kiran/local-ai-code-review-before-a-pr-tools-that-catch-bugs-before-you-push-b8e",
+   "publishedAt": "2026-11-22T10:17:47Z",
+   "category": "动态",
+   "tags": [
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/dev_kiran/local-ai-code-review-before-a-pr-tools-that-catch-bugs-before-you-push-b8e"
+    }
+   ],
+   "score": 49,
+   "pop": 11,
+   "comments": 3,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 11",
+   "reasonBy": "local"
+  },
+  {
+   "id": 90,
+   "title": "I let Claude Code work alone for 8 hours. Here is the hook that made it safe",
+   "url": "https://dev.to/yatuk/i-let-claude-code-work-alone-for-8-hours-here-is-the-hook-that-made-it-safe-fje",
+   "publishedAt": "2026-11-22T14:13:37Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/yatuk/i-let-claude-code-work-alone-for-8-hours-here-is-the-hook-that-made-it-safe-fje"
+    }
+   ],
+   "score": 49,
+   "pop": 9,
+   "comments": 5,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 9",
+   "reasonBy": "local"
+  },
+  {
+   "id": 91,
+   "title": "Coding agents won't replace you, but they're changing what \"senior\" means",
+   "url": "https://dev.to/amananandrai/coding-agents-wont-replace-you-but-theyre-changing-what-senior-means-18a4",
+   "publishedAt": "2026-11-22T15:44:24Z",
+   "category": "动态",
+   "tags": [
+    "智能体",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/amananandrai/coding-agents-wont-replace-you-but-theyre-changing-what-senior-means-18a4"
+    }
+   ],
+   "score": 49,
+   "pop": 8,
+   "comments": 4,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 8",
+   "reasonBy": "local"
+  },
+  {
+   "id": 73,
+   "title": "\"IDEs kind of faded away\" – Nadella on VS Studio, as Claude Code takes the lead",
+   "url": "https://www.windowslatest.com/2026/11/23/the-thing-that-hit-us-satya-nadella-admits-vs-code-faded-in-six-months-after-a-decade-on-top-because-of-claude-code-and-some-developers-say-theyve-stopped-opening-it/",
+   "publishedAt": "2026-11-22T23:13:10Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://www.windowslatest.com/2026/11/23/the-thing-that-hit-us-satya-nadella-admits-vs-code-faded-in-six-months-after-a-decade-on-top-because-of-claude-code-and-some-developers-say-theyve-stopped-opening-it/"
+    }
+   ],
+   "score": 48,
+   "pop": 5,
+   "comments": 1,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 5",
+   "reasonBy": "local"
+  },
+  {
+   "id": 3,
+   "title": "Binding of Isaac developer removes AI music from Repentance Plus",
+   "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+   "publishedAt": "2026-11-22T17:25:20.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music"
+    }
+   ],
+   "score": 47,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 14,
+   "title": "Why data centers are at the center of the Big Tech backlash",
+   "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+   "publishedAt": "2026-11-22T18:08:43.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/"
+    }
+   ],
+   "score": 47,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 60,
+   "title": "🐧ai写 ai批 ai改🐧",
+   "url": "https://www.bilibili.com/video/BV1M5yVzjEDL",
+   "publishedAt": "2026-11-22T08:34:20.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "B站",
+     "url": "https://www.bilibili.com/video/BV1M5yVzjEDL"
+    }
+   ],
+   "score": 47,
+   "pop": 44173,
+   "comments": 1587,
+   "lang": "zh",
+   "isVideo": true,
+   "reason": "B站 热度 44173",
+   "reasonBy": "local"
+  },
+  {
+   "id": 72,
+   "title": "Show HN: Taskless, turn AGENTS.md and PR comments into runnable checks",
+   "url": "https://www.taskless.io/",
+   "publishedAt": "2026-11-22T20:11:12Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://www.taskless.io/"
+    }
+   ],
+   "score": 47,
+   "pop": 6,
+   "comments": 2,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 6",
+   "reasonBy": "local"
+  },
+  {
+   "id": 96,
+   "title": "Claude Works on My Real Code Now. It Asks First, and It Remembers (Waymark v0.4)",
+   "url": "https://dev.to/prashant_patil_9e62d3fa8a/claude-works-on-my-real-code-now-it-asks-first-and-it-remembers-waymark-v04-15n",
+   "publishedAt": "2026-11-22T12:34:54Z",
+   "category": "产品",
+   "tags": [
+    "Anthropic",
+    "编码",
+    "开源"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/prashant_patil_9e62d3fa8a/claude-works-on-my-real-code-now-it-asks-first-and-it-remembers-waymark-v04-15n"
+    }
+   ],
+   "score": 47,
+   "pop": 6,
+   "comments": 2,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 6",
+   "reasonBy": "local"
+  },
+  {
+   "id": 98,
+   "title": "If Your Recovery Plan Needs the Chat to Stay Alive, You Don't Have One",
+   "url": "https://dev.to/aheadkit/if-your-recovery-plan-needs-the-chat-to-stay-alive-you-dont-have-one-13bo",
+   "publishedAt": "2026-11-22T16:00:00Z",
+   "category": "动态",
+   "tags": [
+    "安全"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/aheadkit/if-your-recovery-plan-needs-the-chat-to-stay-alive-you-dont-have-one-13bo"
+    }
+   ],
+   "score": 47,
+   "pop": 4,
+   "comments": 4,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 4",
+   "reasonBy": "local"
+  },
+  {
+   "id": 99,
+   "title": "Day 29/90 — Building a Read-Only MCP Server: A Practical Approach to Safer AI Agents",
+   "url": "https://dev.to/rimsha_kanwal/day-2990-building-a-read-only-mcp-server-a-practical-approach-to-safer-ai-agents-1n73",
+   "publishedAt": "2026-11-22T17:42:27Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/rimsha_kanwal/day-2990-building-a-read-only-mcp-server-a-practical-approach-to-safer-ai-agents-1n73"
+    }
+   ],
+   "score": 47,
+   "pop": 3,
+   "comments": 2,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 102,
+   "title": "Uncle Bob Stopped Reading His Agents' Code. I Got There From the Other Side, With Three Vendors.",
+   "url": "https://dev.to/wilddog64/uncle-bob-stopped-reading-his-agents-code-i-got-there-from-the-other-side-with-three-vendors-4pof",
+   "publishedAt": "2026-11-22T18:03:37Z",
+   "category": "动态",
+   "tags": [
+    "智能体",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/wilddog64/uncle-bob-stopped-reading-his-agents-code-i-got-there-from-the-other-side-with-three-vendors-4pof"
+    }
+   ],
+   "score": 47,
+   "pop": 3,
+   "comments": 6,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 24,
+   "title": "AI coding agents ace isolated tests but complete fewer than one in ten tasks in a simulated workplace",
+   "url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/",
+   "publishedAt": "2026-11-22T15:15:48.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/"
+    }
+   ],
+   "score": 46,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 25,
+   "title": "Perplexity's new Monitor API turns web search from a one-off query into a nonstop watchdog",
+   "url": "https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/",
+   "publishedAt": "2026-11-22T14:20:28.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/"
+    }
+   ],
+   "score": 46,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 74,
+   "title": "The lottery of career success: or why you may want to bribe OpenAI",
+   "url": "https://notnottalmud.substack.com/p/the-lottery-of-career-success-or",
+   "publishedAt": "2026-11-22T19:21:38Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://notnottalmud.substack.com/p/the-lottery-of-career-success-or"
+    }
+   ],
+   "score": 46,
+   "pop": 5,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 5",
+   "reasonBy": "local"
+  },
+  {
+   "id": 100,
+   "title": "LLM routing and zero retention need an endpoint inventory",
+   "url": "https://dev.to/reidmarlow/llm-routing-and-zero-retention-need-an-endpoint-inventory-75f",
+   "publishedAt": "2026-11-22T16:12:47Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/reidmarlow/llm-routing-and-zero-retention-need-an-endpoint-inventory-75f"
+    }
+   ],
+   "score": 46,
+   "pop": 3,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 101,
+   "title": "I Asked AI Models to Optimize a Java Hot Path. Then I Audited Their Benchmarks.",
+   "url": "https://dev.to/mensonones/i-asked-ai-models-to-optimize-a-java-hot-path-then-i-audited-their-benchmarks-22ib",
+   "publishedAt": "2026-11-22T15:33:09Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/mensonones/i-asked-ai-models-to-optimize-a-java-hot-path-then-i-audited-their-benchmarks-22ib"
+    }
+   ],
+   "score": 46,
+   "pop": 3,
+   "comments": 3,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 143,
+   "title": "财务团队的 AI 蓝图",
+   "url": "https://www.infoq.cn/video/UUqekkOQ8haEXZ792UjU?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-22T17:54:58.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/video/UUqekkOQ8haEXZ792UjU?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 46,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 144,
+   "title": "打造 AI 优先的销售与营销运营体系",
+   "url": "https://www.infoq.cn/video/mihBFvImttvJlSFUqC49?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-22T17:41:49.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/video/mihBFvImttvJlSFUqC49?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 46,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 145,
+   "title": "智能体企业新前沿：驱动高效智能",
+   "url": "https://www.infoq.cn/video/Ly5HbhY4pNMCF04abkFo?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-22T17:38:28.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/video/Ly5HbhY4pNMCF04abkFo?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 46,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 4,
+   "title": "The vibe-coding revolution is coming to all the gadgets",
+   "url": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera",
+   "publishedAt": "2026-11-22T13:00:00.000Z",
+   "category": "动态",
+   "tags": [
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera"
+    }
+   ],
+   "score": 45,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 26,
+   "title": "AI is getting better faster than experts can reliably test whether new systems are safe, METR warns",
+   "url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/",
+   "publishedAt": "2026-11-22T13:00:43.000Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI"
+   ],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/"
+    }
+   ],
+   "score": 45,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 27,
+   "title": "Security researchers show how cheap AI inference providers steal keys and snoop on users",
+   "url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/",
+   "publishedAt": "2026-11-22T12:07:56.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/"
+    }
+   ],
+   "score": 45,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 57,
+   "title": "《怪盗牢德2》：科比为偷雨姐袜子与豆包和大肥鱼战斗",
+   "url": "https://www.bilibili.com/video/BV1hMyizUELW",
+   "publishedAt": "2026-11-22T02:40:00.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "B站",
+     "url": "https://www.bilibili.com/video/BV1hMyizUELW"
+    }
+   ],
+   "score": 45,
+   "pop": 35437,
+   "comments": 1286,
+   "lang": "zh",
+   "isVideo": true,
+   "reason": "B站 热度 35437",
+   "reasonBy": "local"
+  },
+  {
+   "id": 69,
+   "title": "TSMC acquires 0.03% stake in Anthropic for US$500M",
+   "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/20/2003868042",
+   "publishedAt": "2026-11-22T17:50:39Z",
+   "category": "行业",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/20/2003868042"
+    }
+   ],
+   "score": 45,
+   "pop": 7,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 7",
+   "reasonBy": "local"
+  },
+  {
+   "id": 76,
+   "title": "LLMs have made bot programming boring, how can we make it fun again?",
+   "url": "https://neilnaveen.dev/posts/llm-bot-programming/",
+   "publishedAt": "2026-11-22T16:56:15Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://neilnaveen.dev/posts/llm-bot-programming/"
+    }
+   ],
+   "score": 45,
+   "pop": 5,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 5",
+   "reasonBy": "local"
+  },
+  {
+   "id": 78,
+   "title": "Tend. one local page for all your Claude Code sessions",
+   "url": "https://github.com/Geekgineer/tend",
+   "publishedAt": "2026-11-22T17:28:24Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://github.com/Geekgineer/tend"
+    }
+   ],
+   "score": 45,
+   "pop": 3,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 95,
+   "title": "Notes on making an AI agent ask before it pushes",
+   "url": "https://dev.to/remdore/notes-on-making-an-ai-agent-ask-before-it-pushes-2lf7",
+   "publishedAt": "2026-11-22T08:16:56Z",
+   "category": "动态",
+   "tags": [
+    "智能体",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/remdore/notes-on-making-an-ai-agent-ask-before-it-pushes-2lf7"
+    }
+   ],
+   "score": 45,
+   "pop": 6,
+   "comments": 3,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 6",
+   "reasonBy": "local"
+  },
+  {
+   "id": 120,
+   "title": "给娃做个 AI 陪写作业助手：LangChain4j 入门（四）：向量库搬进 Qdrant（向量数据库入门）",
+   "url": "https://juejin.cn/post/7710636227040509962",
+   "publishedAt": "2026-11-22T14:44:25.000Z",
+   "category": "技巧",
+   "tags": [],
+   "sources": [
+    {
+     "name": "掘金",
+     "url": "https://juejin.cn/post/7710636227040509962"
+    }
+   ],
+   "score": 45,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 0,
+   "title": "Perplexity and Intelligence",
+   "url": "https://openai.com/index/perplexity-and-intelligence",
+   "publishedAt": "2026-11-22T00:00:00.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "OpenAI 官方",
+     "url": "https://openai.com/index/perplexity-and-intelligence"
+    }
+   ],
+   "score": 44,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 28,
+   "title": "Lean and Mathlib community officially confirms Levent Alpöge's proof of the Riemann hypothesis is correct",
+   "url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/",
+   "publishedAt": "2026-11-22T11:08:31.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/"
+    }
+   ],
+   "score": 44,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 29,
+   "title": "GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude",
+   "url": "https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/",
+   "publishedAt": "2026-11-22T09:41:37.000Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI",
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/"
+    }
+   ],
+   "score": 44,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 97,
+   "title": "Give Your AI Agent a Wallet It Can't Overspend (Telegraph + MCP)",
+   "url": "https://dev.to/aghazie_david_4dc30f4c9a8/give-your-ai-agent-a-wallet-it-cant-overspend-telegraph-mcp-kd6",
+   "publishedAt": "2026-11-22T08:12:55Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "Dev.to",
+     "url": "https://dev.to/aghazie_david_4dc30f4c9a8/give-your-ai-agent-a-wallet-it-cant-overspend-telegraph-mcp-kd6"
+    }
+   ],
+   "score": 44,
+   "pop": 4,
+   "comments": 18,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Dev.to 热度 4",
+   "reasonBy": "local"
+  },
+  {
+   "id": 68,
+   "title": "SpaceX and Anthropic Ran an Unusual IPO Process",
+   "url": "https://www.reuters.com/world/like-spacex-anthropic-ran-an-unusual-ipo-process-chafing-some-bankers-2026-11-22/",
+   "publishedAt": "2026-11-22T12:44:51Z",
+   "category": "行业",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://www.reuters.com/world/like-spacex-anthropic-ran-an-unusual-ipo-process-chafing-some-bankers-2026-11-22/"
+    }
+   ],
+   "score": 43,
+   "pop": 9,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 9",
+   "reasonBy": "local"
+  },
+  {
+   "id": 79,
+   "title": "Show HN: NestDaddy Memory, one memory shared by ChatGPT, Claude and Cursor",
+   "url": "https://nestdaddy.com/memory",
+   "publishedAt": "2026-11-22T12:37:28Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI",
+    "Anthropic",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://nestdaddy.com/memory"
+    }
+   ],
+   "score": 43,
+   "pop": 3,
+   "comments": 3,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 81,
+   "title": "Did Anthropic and its bankers get a key call wrong after IPO?",
+   "url": "https://www.ft.com/content/d501198c-14a4-4b96-8880-c3997545902e",
+   "publishedAt": "2026-11-22T13:35:29Z",
+   "category": "行业",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://www.ft.com/content/d501198c-14a4-4b96-8880-c3997545902e"
+    }
+   ],
+   "score": 43,
+   "pop": 3,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 146,
+   "title": "智能体身份国际标准化：体系布局与研制实践｜AICon北京",
+   "url": "https://www.infoq.cn/article/721YPdyIZ1D8xz20D22C?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-22T10:00:00.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/721YPdyIZ1D8xz20D22C?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 43,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 147,
+   "title": "亚马逊云科技推出 TorchNeuron，可以直接在 AWS Trainium 上运行 PyTorch 模型，无需任何修改",
+   "url": "https://www.infoq.cn/article/XhtWUmaolJECUhPX2jzY?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-22T10:00:00.000Z",
+   "category": "产品",
+   "tags": [],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/XhtWUmaolJECUhPX2jzY?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 43,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 71,
+   "title": "Zero Trust for AI Agents",
+   "url": "https://claude.com/resources/articles/zero-trust-for-ai-agents",
+   "publishedAt": "2026-11-22T11:12:52Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://claude.com/resources/articles/zero-trust-for-ai-agents"
+    }
+   ],
+   "score": 42,
+   "pop": 6,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 6",
+   "reasonBy": "local"
+  },
+  {
+   "id": 80,
+   "title": "Ask HN: Where the company's employees launch the tools that Claude created",
+   "url": "https://news.ycombinator.com/item?id=50598355",
+   "publishedAt": "2026-11-22T10:47:34Z",
+   "category": "模型",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50598355"
+    }
+   ],
+   "score": 42,
+   "pop": 3,
+   "comments": 3,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "Hacker News 热度 3",
+   "reasonBy": "local"
+  },
+  {
+   "id": 123,
+   "title": "Nature：糖尿病大鼠成功恢复正常血糖！用电刺激迷走神经控糖",
+   "url": "https://www.qbitai.com/2026/11/511904.html",
+   "publishedAt": "2026-11-22T06:21:47.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511904.html"
+    }
+   ],
+   "score": 42,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 48,
+   "title": "Claude 的黎曼猜想证明获 Lean 官方认证，马斯克直呼惊人成就",
+   "url": "https://www.ifanr.com/1690820?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-22T01:35:14.000Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690820?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 41,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 64,
+   "title": "Anthropic的研究员莱文特在数学上的贡献能冲击下届菲尔茨奖吗？",
+   "url": "https://www.zhihu.com/question/2079269266092774400",
+   "publishedAt": "2026-09-04T10:07:03.000Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "知乎热榜",
+     "url": "https://www.zhihu.com/question/2079269266092774400"
+    }
+   ],
+   "score": 41,
+   "pop": 930000,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "知乎热榜 热度 930000",
+   "reasonBy": "local"
+  },
+  {
+   "id": 124,
+   "title": "A社数学家用Claude又证明另一千禧难题，逼出一份写了12年的940页纯人类手稿",
+   "url": "https://www.qbitai.com/2026/11/511870.html",
+   "publishedAt": "2026-11-22T06:03:54.000Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511870.html"
+    }
+   ],
+   "score": 41,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 5,
+   "title": "The UN fails to agree on rules regulating ‘killer robots’",
+   "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
+   "publishedAt": "2026-11-21T20:03:37.000Z",
+   "category": "行业",
+   "tags": [
+    "机器人"
+   ],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots"
+    }
+   ],
+   "score": 40,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 15,
+   "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+   "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+   "publishedAt": "2026-11-21T21:37:10.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/"
+    }
+   ],
+   "score": 40,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 16,
+   "title": "A tale of two Nvidias",
+   "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
+   "publishedAt": "2026-11-21T21:07:42.000Z",
+   "category": "动态",
+   "tags": [
+    "芯片算力"
+   ],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/"
+    }
+   ],
+   "score": 40,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 65,
+   "title": "网上那么多的人烧token用agent，但我觉得直接调用api好贵，是我太穷了吗？",
+   "url": "https://www.zhihu.com/question/2074853935786075000",
+   "publishedAt": "2026-08-23T05:42:07.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "知乎热榜",
+     "url": "https://www.zhihu.com/question/2074853935786075000"
+    }
+   ],
+   "score": 40,
+   "pop": 840000,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "知乎热榜 热度 840000",
+   "reasonBy": "local"
+  },
+  {
+   "id": 1,
+   "title": "Combatting adversarial distillation",
+   "url": "https://openai.com/index/combatting-adversarial-distillation",
+   "publishedAt": "2026-11-20T10:00:00.000Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI"
+   ],
+   "sources": [
+    {
+     "name": "OpenAI 官方",
+     "url": "https://openai.com/index/combatting-adversarial-distillation"
+    }
+   ],
+   "score": 39,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 6,
+   "title": "Can Anthropic afford to put safety first?",
+   "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+   "publishedAt": "2026-11-21T15:00:00.000Z",
+   "category": "行业",
+   "tags": [
+    "Anthropic",
+    "安全"
+   ],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure"
+    }
+   ],
+   "score": 39,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 7,
+   "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+   "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+   "publishedAt": "2026-11-21T14:00:00.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai"
+    }
+   ],
+   "score": 39,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 17,
+   "title": "Here are the top AI agents that can live in your text messages",
+   "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+   "publishedAt": "2026-11-21T17:00:00.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/"
+    }
+   ],
+   "score": 39,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 18,
+   "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+   "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+   "publishedAt": "2026-11-21T16:00:00.000Z",
+   "category": "产品",
+   "tags": [],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/"
+    }
+   ],
+   "score": 39,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 30,
+   "title": "Nvidia researchers argue huge AI context windows are a dead end",
+   "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/",
+   "publishedAt": "2026-11-21T16:23:45.000Z",
+   "category": "动态",
+   "tags": [
+    "芯片算力"
+   ],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/"
+    }
+   ],
+   "score": 39,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 31,
+   "title": "Silicon Valley's growing obsession with AI doomsday is turning parts of the tech industry toward cult-like devotion",
+   "url": "https://the-decoder.com/silicon-valleys-growing-obsession-with-ai-doomsday-is-turning-parts-of-the-tech-industry-toward-cult-like-devotion/",
+   "publishedAt": "2026-11-21T16:04:29.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/silicon-valleys-growing-obsession-with-ai-doomsday-is-turning-parts-of-the-tech-industry-toward-cult-like-devotion/"
+    }
+   ],
+   "score": 39,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 32,
+   "title": "OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions",
+   "url": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/",
+   "publishedAt": "2026-11-21T13:32:35.000Z",
+   "category": "技巧",
+   "tags": [
+    "OpenAI"
+   ],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/"
+    }
+   ],
+   "score": 39,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 33,
+   "title": "Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft",
+   "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
+   "publishedAt": "2026-11-21T11:19:49.000Z",
+   "category": "模型",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/"
+    }
+   ],
+   "score": 38,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 125,
+   "title": "AI给乐队现场搓MV，这是黑客松还是音乐节啊",
+   "url": "https://www.qbitai.com/2026/11/511855.html",
+   "publishedAt": "2026-11-21T14:14:09.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511855.html"
+    }
+   ],
+   "score": 38,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 126,
+   "title": "中国计算，走出新的登峰之路",
+   "url": "https://www.qbitai.com/2026/11/511849.html",
+   "publishedAt": "2026-11-21T14:09:59.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511849.html"
+    }
+   ],
+   "score": 38,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 8,
+   "title": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US",
+   "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+   "publishedAt": "2026-11-20T18:50:19.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 9,
+   "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+   "publishedAt": "2026-11-20T16:34:13.000Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 19,
+   "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+   "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+   "publishedAt": "2026-11-20T19:53:41.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 20,
+   "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+   "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+   "publishedAt": "2026-11-20T19:32:08.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 21,
+   "title": "Chips can survive the space environment — can their financing?",
+   "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/",
+   "publishedAt": "2026-11-20T17:40:01.000Z",
+   "category": "动态",
+   "tags": [
+    "芯片算力"
+   ],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 34,
+   "title": "Google rolls out new search homepage with AI chat history and no search button",
+   "url": "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/",
+   "publishedAt": "2026-11-20T21:58:29.000Z",
+   "category": "动态",
+   "tags": [
+    "Google"
+   ],
+   "sources": [
+    {
+     "name": "Ars Technica AI",
+     "url": "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 35,
+   "title": "Meta reconsiders 2030 net-zero goal amid record emissions from AI data centers",
+   "url": "https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/",
+   "publishedAt": "2026-11-20T21:47:10.000Z",
+   "category": "动态",
+   "tags": [
+    "Meta"
+   ],
+   "sources": [
+    {
+     "name": "Ars Technica AI",
+     "url": "https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 36,
+   "title": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced.",
+   "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+   "publishedAt": "2026-11-20T20:59:08.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "Ars Technica AI",
+     "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 49,
+   "title": "美股一夜崩盘，AI 泡沫真要破了？",
+   "url": "https://www.ifanr.com/1690789?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-21T03:30:42.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690789?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 50,
+   "title": "刚刚，曝黎曼猜想被证明，Claude 立大功",
+   "url": "https://www.ifanr.com/1690750?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-21T01:29:09.000Z",
+   "category": "动态",
+   "tags": [
+    "Anthropic"
+   ],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690750?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 51,
+   "title": "早报｜曝Claude证明黎曼猜想，陶哲轩回应/余承东更正发布会表述：开车不能睡觉/五月天公布Vision Pro演唱会，Apple Store可预约体验",
+   "url": "https://www.ifanr.com/1690759?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-21T00:25:08.000Z",
+   "category": "产品",
+   "tags": [
+    "Anthropic",
+    "多模态"
+   ],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690759?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 127,
+   "title": "8万条群聊消息做成考卷：腾讯元宝×KCL发布首个基于群聊构建的Agent记忆基准",
+   "url": "https://www.qbitai.com/2026/11/511841.html",
+   "publishedAt": "2026-11-21T11:40:11.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511841.html"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 128,
+   "title": "全网疯传！Grok一姐教你如何月提交3000个PR",
+   "url": "https://www.qbitai.com/2026/11/511830.html",
+   "publishedAt": "2026-11-21T11:34:18.000Z",
+   "category": "技巧",
+   "tags": [
+    "xAI"
+   ],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511830.html"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 129,
+   "title": "反超Gemini之后，Karpo新作再开源，浏览器Agent速效双赢",
+   "url": "https://www.qbitai.com/2026/11/511791.html",
+   "publishedAt": "2026-11-21T11:24:29.000Z",
+   "category": "动态",
+   "tags": [
+    "Google",
+    "智能体",
+    "开源"
+   ],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511791.html"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 130,
+   "title": "GPT-6.2 Astra再次暴击具身模型：16项任务成功率较GPT-6 Astra翻倍",
+   "url": "https://www.qbitai.com/2026/11/511779.html",
+   "publishedAt": "2026-11-21T06:35:59.000Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI",
+    "机器人"
+   ],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511779.html"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 131,
+   "title": "刚刚，DeepSeek V1作者创业项目曝光：开源Agent",
+   "url": "https://www.qbitai.com/2026/11/511570.html",
+   "publishedAt": "2026-11-21T06:32:31.000Z",
+   "category": "动态",
+   "tags": [
+    "DeepSeek",
+    "智能体",
+    "开源"
+   ],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511570.html"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 132,
+   "title": "姚顺雨和混元团队上Reddit答网友，Hy小模型已进路线图",
+   "url": "https://www.qbitai.com/2026/11/511757.html",
+   "publishedAt": "2026-11-21T06:30:55.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/11/511757.html"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 148,
+   "title": "智能体 AI 架构：当前挑战与未来机遇",
+   "url": "https://www.infoq.cn/article/TrWuo2vEZRl2xB2XXZNX?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-21T11:00:00.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/TrWuo2vEZRl2xB2XXZNX?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 149,
+   "title": "TaoDesign 的知识工程实践：从设计资产到 Agent 持续进化｜AICon北京",
+   "url": "https://www.infoq.cn/article/vhoobUFbLs2hUlTBA4HZ?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-21T10:00:00.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/vhoobUFbLs2hUlTBA4HZ?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 150,
+   "title": "Entire Git Forge：面向编码智能体重构 Git 协作方式",
+   "url": "https://www.infoq.cn/article/6swrOq5xUXwVqrREwJwc?utm_source=rss&utm_medium=article",
+   "publishedAt": "2026-11-21T10:00:00.000Z",
+   "category": "动态",
+   "tags": [
+    "智能体",
+    "编码"
+   ],
+   "sources": [
+    {
+     "name": "InfoQ",
+     "url": "https://www.infoq.cn/article/6swrOq5xUXwVqrREwJwc?utm_source=rss&utm_medium=article"
+    }
+   ],
+   "score": 37,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 10,
+   "title": "The week everything fell apart",
+   "url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
+   "publishedAt": "2026-11-20T14:06:59.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast"
+    }
+   ],
+   "score": 36,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 11,
+   "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+   "publishedAt": "2026-11-20T12:30:47.000Z",
+   "category": "动态",
+   "tags": [
+    "Google",
+    "智能体"
+   ],
+   "sources": [
+    {
+     "name": "The Verge AI",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app"
+    }
+   ],
+   "score": 36,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 22,
+   "title": "The fallout from Nvidia’s Jensen Huang scandal continues",
+   "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
+   "publishedAt": "2026-11-20T14:55:44.000Z",
+   "category": "动态",
+   "tags": [
+    "芯片算力"
+   ],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/"
+    }
+   ],
+   "score": 36,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 23,
+   "title": "Six AI-powered gadgets that could make your home office smarter",
+   "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
+   "publishedAt": "2026-11-20T14:00:00.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/"
+    }
+   ],
+   "score": 36,
+   "pop": 0,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 52,
+   "title": "理想造了一颗登上台积电讲台的芯片，却希望你在开车时彻底忘掉它",
+   "url": "https://www.ifanr.com/1690596?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-20T10:39:47.000Z",
+   "category": "动态",
+   "tags": [
+    "芯片算力"
+   ],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690596?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 36,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 53,
+   "title": "首款鸿蒙 AI 手机发布：华为全新子品牌 OSTA 星芒有一个「增援未来计划」",
+   "url": "https://www.ifanr.com/1690642?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-20T09:17:05.000Z",
+   "category": "动态",
+   "tags": [],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690642?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 36,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 54,
+   "title": "给 Gemini 道歉，请自觉排队",
+   "url": "https://www.ifanr.com/1690572?utm_source=rss&utm_medium=rss&utm_campaign=",
+   "publishedAt": "2026-11-20T09:03:13.000Z",
+   "category": "动态",
+   "tags": [
+    "Google"
+   ],
+   "sources": [
+    {
+     "name": "爱范儿",
+     "url": "https://www.ifanr.com/1690572?utm_source=rss&utm_medium=rss&utm_campaign="
+    }
+   ],
+   "score": 36,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 56,
+   "title": "An underrated way to use ChatGPT: Life admin",
+   "url": "https://www.youtube.com/shorts/2pdF52EVlbM",
+   "publishedAt": "2026-11-18T00:06:39.000Z",
+   "category": "动态",
+   "tags": [
+    "OpenAI"
+   ],
+   "sources": [
+    {
+     "name": "YouTube·OpenAI",
+     "url": "https://www.youtube.com/shorts/X19Q12hmRjY"
+    }
+   ],
+   "score": 35,
+   "pop": 9854,
+   "comments": 0,
+   "lang": "en",
+   "isVideo": true,
+   "reason": "YouTube·OpenAI 热度 9854",
+   "reasonBy": "local"
+  },
+  {
+   "id": 134,
+   "title": "派早报：Google 推出 Gemini 4 Neon 模型，网易 UU 远程将于 12 月推出付费会员等",
+   "url": "https://sspai.com/post/119311",
+   "publishedAt": "2026-11-20T00:34:31.000Z",
+   "category": "产品",
+   "tags": [
+    "Google"
+   ],
+   "sources": [
+    {
+     "name": "少数派",
+     "url": "https://sspai.com/post/119311"
+    }
+   ],
+   "score": 35,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  },
+  {
+   "id": 135,
+   "title": "给 Apple 的 2026 年打分，请你一起参与",
+   "url": "https://sspai.com/post/119191",
+   "publishedAt": "2026-11-19T10:25:05.000Z",
+   "category": "产品",
+   "tags": [
+    "芯片算力"
+   ],
+   "sources": [
+    {
+     "name": "少数派",
+     "url": "https://sspai.com/post/119191"
+    }
+   ],
+   "score": 34,
+   "pop": 0,
+   "comments": 0,
+   "lang": "zh",
+   "isVideo": false,
+   "reason": "值得关注的动态",
+   "reasonBy": "local"
+  }
+ ]
+}
